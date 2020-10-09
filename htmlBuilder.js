@@ -4,3 +4,7 @@
 
 //For example, this is where we will inject the modalExample code into index.html without having a crazy tree
 //in that file
+// $('.launchModal').on('click',function(){
+//     $('#exampleModal1').foundation('reveal','open');
+// });
+$(document).foundation();
