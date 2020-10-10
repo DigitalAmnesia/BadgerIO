@@ -3,27 +3,22 @@
 //this will allow for much cleaner front end development without useing a templater like handlebars
 // $('.modalContent').load('modalExample.html body');
 // $('#modalTrigger').attr('href','#modal1')
+var modalz = 
+`<div id="modal1" class="modal">
+    <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>`;
 
-// $(function(){
-//     // $('.modalContent').append($('#modal1').html());
-//     $('.modalContent').load('modalExample.html');
-    
-//     $('.modal').modal();
-//     $('#modalTrigger').attr('href','.modal1').addClass('modal-trigger');
-//     // $('#modal1').modal('open');
-// });
 
 $(function(){
-    const supportsTemplate = function(){
-        return 'content' in document.createElement('template');
-    };
-    document.addEventListener('DOMContentLoaded', ()=> {
-        if(supportsTemplate()){
-            let temp = document.getElementById('firstModal');
-            let content2 = temp.content;
-            $('#modalContent').append(content2);
-            console.log("template loaded");
-        }
-    });
-
+    $('.modalContent').html(modalz);
+    $('.modal').modal();
+    $('#modalTrigger').attr('href','#modal1').addClass('modal-trigger');
+    // $('#modal1').modal('open'); //one useful way to fire a modal programaticly 
 });
+
