@@ -36,10 +36,10 @@ var modalz =
 var createAcountContent =
 `<div id="createAccountModal" class="modal">
     <div class="row modal-content">
-        <div class="col s12 m10 l8">
-            <div class="card-panel ">
+        <div class="col s12">
+            <div class="card-panel">
                 <div class="row">
-                    <form class="col s12 m10 l8">
+                    <form class="col s12 m12 l12">
                         <div class="row">
                             <div class="input-field col s8">
                                 <i class="mdi-communication-email prefix"></i>
@@ -62,7 +62,7 @@ var createAcountContent =
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col s12">
+                            <div class="input-field col s12 modal-close">
                                 <a href="#" class="btn waves-effect waves-light col "><h6>Create Account</h6></a>
                             </div>
                         </div>
@@ -71,7 +71,4 @@ var createAcountContent =
             </div>
         </div>
       </div>
-    <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
 </div>`;

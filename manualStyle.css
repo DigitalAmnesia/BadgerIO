@@ -10,4 +10,7 @@
 #home-page-logo {
     margin-left: 5%;
 } 
-
+.modal {
+    width: 60% !important; 
+    max-height: 80% !important;
+}
