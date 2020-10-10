@@ -16,11 +16,17 @@ var modalz =
 
 
 $(function(){
+    testForMobile();
     $('.modalContent').html(modalz);
     $('#modalTrigger').attr('href','#modal1').addClass('modal-trigger');
     $('.modal').modal(); //needed in order to initialize Materialize modals
     $('.sidenav').sidenav(); //needed in order to initialize side bar for mobile menu
-    
+
     // $('#modal1').modal('open'); //one useful way to fire a modal programaticly 
 });
 
+function testForMobile(){
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        $('.brand-logo').removeAttr('id'); //centers the logo on mobile devices -- remember to refresh in inspector
+    }
+}
