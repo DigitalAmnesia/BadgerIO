@@ -17,8 +17,8 @@ var modalz =
 
 $(function(){
     $('.modalContent').html(modalz);
-    $('.modal').modal();
     $('#modalTrigger').attr('href','#modal1').addClass('modal-trigger');
+    $('.modal').modal();
     // $('#modal1').modal('open'); //one useful way to fire a modal programaticly 
 });
 
