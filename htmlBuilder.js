@@ -17,7 +17,7 @@ $(function(){
 
     // $('#modal1').modal('open'); //one useful way to fire a modal programaticly without an event listener such as winning a game
 });
-
+//checks if the user is on a mobile device and if so enters past the control statement
 function testForMobile(){
     if (/Mobi|Android/i.test(navigator.userAgent)) {
         $('.brand-logo').removeAttr('id'); //centers the logo on mobile devices -- remember to refresh in inspector
