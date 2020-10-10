@@ -13,31 +13,33 @@
     <link rel="stylesheet" href="manualStyle.css">
 </head>
 <body>
-    <nav class="nav-extended">
+    <nav class="nav-extended teal darken-1">
         <div class="nav-wrapper">
           <a href="#" class="brand-logo">Logo</a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Create Account</a></li>
+            <li><a href="#">Log In</a></li>
           </ul>
         </div>
         <div class="nav-content">
           <ul class="tabs tabs-transparent">
             <li class="tab"><a href="#">Test 1</a></li>
-            <li class="tab"><a class="active" href="#">Test 2</a></li>
-            <li class="tab disabled"><a href="#t">Disabled Tab</a></li>
-            <li class="tab"><a id="modalTrigger" href="#">Test 4</a></li>
+            <li class="tab"><a href="#">Test 2</a></li>
+            <li class="tab"><a href="#">Test 3</a></li>
+            <li class="tab"><a id="modalTrigger" href="#">Fire Modal</a></li>
           </ul>
         </div>
       </nav>
     
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="#">Sass</a></li>
-        <li><a href="#">Components</a></li>
-        <li><a href="#">JavaScript</a></li>
+      
+      <ul class="sidenav teal accent-3" id="mobile-demo">
+        <li><a class="largerMobile btn" href="#">About</a></li>
+        <li><a class="largerMobile btn" href="#">Create Account</a></li>
+        <li><a class="largerMobile btn" id="mobile-log-in" href="#">Log In</a></li>
       </ul>
+  
     <!-- dynamically filled from htmlBuilder.js -->
     <div class="modalContent"></div>
 

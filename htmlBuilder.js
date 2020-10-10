@@ -18,7 +18,9 @@ var modalz =
 $(function(){
     $('.modalContent').html(modalz);
     $('#modalTrigger').attr('href','#modal1').addClass('modal-trigger');
-    $('.modal').modal();
+    $('.modal').modal(); //needed in order to initialize Materialize modals
+    $('.sidenav').sidenav(); //needed in order to initialize side bar for mobile menu
+    
     // $('#modal1').modal('open'); //one useful way to fire a modal programaticly 
 });
 

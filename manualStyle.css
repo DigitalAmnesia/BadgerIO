@@ -1,0 +1,9 @@
+/* I am not sure why this cannot be applied to the whole ul */
+.largerMobile{
+    font-size: 4.5vw !important;
+    margin-top: 5vw !important;
+    /* color:red !important; */
+}
+#mobile-log-in {
+    color: black !important;
+}
