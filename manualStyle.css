@@ -4,12 +4,14 @@
     margin-top: 5vw !important;
     /* color:red !important; */
 }
-#mobile-log-in {
+/* have the log in option stand out for returning customers desktop and mobile */
+.log-in-black {
     color: black !important;
 }
 #home-page-logo {
     margin-left: 5%;
 } 
+/* used to maximize modal area to make forms look better */
 .modal {
     width: 60% !important; 
     max-height: 80% !important;

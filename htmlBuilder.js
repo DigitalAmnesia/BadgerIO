@@ -15,7 +15,7 @@ $(function(){
     $('.modal').modal(); //needed in order to initialize Materialize modals
     $('.sidenav').sidenav(); //needed in order to initialize side bar for mobile menu
 
-    // $('#modal1').modal('open'); //one useful way to fire a modal programaticly 
+    // $('#modal1').modal('open'); //one useful way to fire a modal programaticly without an event listener such as winning a game
 });
 
 function testForMobile(){
