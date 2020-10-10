@@ -1,65 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEOtracker</title>
-    <!-- CSS RESET added for best practice -->
-    <link rel="stylesheet" href="reset.css">
-    <!-- Materialize - Compressed CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Manual Override CSS -->
-    <link rel="stylesheet" href="manualStyle.css">
-    <script src="https://kit.fontawesome.com/7fcf630873.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEOtracker</title>
+  <!-- CSS RESET added for best practice -->
+  <link rel="stylesheet" href="reset.css">
+  <!-- Materialize - Compressed CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Manual Override CSS -->
+  <link rel="stylesheet" href="manualStyle.css">
+  <script src="https://kit.fontawesome.com/7fcf630873.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <nav class="nav-extended teal darken-1">
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo" id="home-page-logo">SEO Tracker</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">About</a></li>
-            <li><a id="createAccountTrig" href="#">Create Account</a></li>
-            <li><a class="log-in-black" href="#">Log In</a></li>
-          </ul>
-        </div>
-        <div class="nav-content">
-          <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="#"><i class="fas fa-flask"></i> Test 1</a></li>
-            <li class="tab"><a href="#"><i class="fas fa-flask"></i> Test 2</a></li>
-            <li class="tab"><a href="#"><i class="fas fa-flask"></i> Test 3</a></li>
-            <li class="tab"><a id="modalTrigger" href="#"><i class="fas fa-file-contract"></i> Fire Modal</a></li>
-          </ul>
-        </div>
-      </nav>
-    <ul class="sidenav teal accent-3" id="mobile-demo">
-        <li><a class="largerMobile btn" href="#">About</a></li>
-        <li><a class="largerMobile btn" href="#">Create Account</a></li>
-        <li><a class="largerMobile btn log-in-black" href="#">Log In</a></li>
-    </ul>
-    <!-- Create an Account Modal-->
-    <div class="createAnAccount"></div>
-    <!-- Fire Modal example dynamically filled from htmlBuilder.js -->
-    <div class="modalContent"></div>
+  <nav class="nav-extended teal darken-1">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo" id="home-page-logo">SEO Tracker</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">About</a></li>
+        <li><a id="createAccountTrig" href="#">Create Account</a></li>
+        <li><a class="log-in-black" href="#">Log In</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a id="cardOneTrigger" href="#"><i class="fas fa-flask"></i> Test 1</a></li>
+        <li class="tab"><a href="#"><i class="fas fa-flask"></i> Test 2</a></li>
+        <li class="tab"><a href="#"><i class="fas fa-flask"></i> Test 3</a></li>
+        <li class="tab"><a id="modalTrigger" href="#"><i class="fas fa-file-contract"></i> Fire Modal</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav teal accent-3" id="mobile-demo">
+    <li><a class="largerMobile btn" href="#">About</a></li>
+    <li><a class="largerMobile btn" href="#">Create Account</a></li>
+    <li><a class="largerMobile btn log-in-black" href="#">Log In</a></li>
+  </ul>
 
-    <!-- ***** Firebase code begins, please do not move anything above ***** -->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
-    <!-- The database src is not included by default -->
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
-    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
-    <script src="firebase.js"></script>
-    <!-- ***** Firebase code ends ***** -->
-    
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <!-- Create an Account Modal-->
+  <div class="createAnAccount"></div>
+  <!-- Fire Modal example dynamically filled from htmlBuilder.js -->
+  <div class="modalContent"></div>
 
-    <!-- Materialize - Compressed JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- ***** Firebase code begins, please do not move anything above ***** -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+  <!-- The database src is not included by default -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+  <script src="firebase.js"></script>
+  <!-- ***** Firebase code ends ***** -->
 
-    <!-- JS for authorizing users via Google API -->
-    <script src="googleAuth.js"></script>
-    <script src="htmlBuilder.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
+  <!-- Materialize - Compressed JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- JS for authorizing users via Google API -->
+  <script src="googleAuth.js"></script>
+  <script src="htmlBuilder.js"></script>
+
+  <!-- Stub AJAX call.  Note that we cannot make AJAX calls to local file paths as this would be a security flaw.  Chrome doesn't allow it.-->
+  <script type="text/javascript" src="demoQueryV1.json">
+    // $.ajax({
+    //   type: 'GET',
+    //   dataType: 'json',
+    //   url: '/DemoQueryV1.JSON',
+    // }).then(function displayTheThings() { });
+  </script>
 </body>
+
 </html>
