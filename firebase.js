@@ -12,5 +12,5 @@
     };
 // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-   
+    // firebase.analytics();
+

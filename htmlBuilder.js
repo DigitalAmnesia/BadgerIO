@@ -14,7 +14,27 @@ $(function(){
     $('.aboutButton').on('click', function(){
         $('.homePageContainer').html(aboutContent);
     });
-    
+    $('.signInFirebase').on('click', function(){
+        // event.preventDefault();
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider).then(function(result) {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = result.credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            // ...
+          }).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+          });
+    });
+
     //initialize Materialize content last so that it is available
     $('.modal').modal(); //needed in order to initialize Materialize modals
     $('.sidenav').sidenav(); //needed in order to initialize side bar for mobile menu
@@ -128,7 +148,7 @@ var createAcountContent =
                         <div class="row">
                             <div class="input-field col s8">
                                 <i class="mdi-action-lock-outline prefix"></i>
-                                <input id="password" type="password" class="validate">
+                                <input id="password2" type="password" class="validate">
                                 <label for="password">Confirm Password</label>
                             </div>
                         </div>
