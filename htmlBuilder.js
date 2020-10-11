@@ -41,7 +41,7 @@ var aboutContent =
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-            <a href="#"><i class="fab fa-github"></i>&nbspGitHub</a>
+            <a href="https://github.com/bpgould" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
             <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
         </div>
     </div>
@@ -54,7 +54,7 @@ var aboutContent =
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-            <a href="#"><i class="fab fa-github"></i>&nbspGitHub</a>
+            <a href="https://github.com/DigitalAmnesia" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
             <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
         </div>
     </div>
@@ -67,7 +67,7 @@ var aboutContent =
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-            <a href="#"><i class="fab fa-github"></i>&nbspGitHub</a>
+            <a href="https://github.com/habby-bit" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
             <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
         </div>
     </div>
@@ -80,7 +80,7 @@ var aboutContent =
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-            <a href="#"><i class="fab fa-github"></i>&nbspGitHub</a>
+            <a href="https://github.com/emelanson" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
             <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
         </div>
     </div>
