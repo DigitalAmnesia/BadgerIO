@@ -135,34 +135,38 @@ var aboutContent =
 var createAcountContent =
 `<div id="createAccountModal" class="modal">
     <div class="row modal-content">
+        <h5 class="center-header">SEO Tracker</h5>
         <div class="col s12">
             <div class="card-panel">
                 <div class="row">
                     <form class="col s12 m12 l12">
                         <div class="row">
-                            <div class="input-field col s8">
+                            <div class="input-field col s10">
                                 <i class="mdi-communication-email prefix"></i>
                                 <input id="email" type="email" class="validate">
                                 <label for="email">Your email</label>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col s8">
+                            <div class="input-field col s10">
                                 <i class="mdi-action-lock-outline prefix"></i>
                                 <input id="password" type="password" class="validate">
                                 <label for="password">Password</label>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col s8">
+                            <div class="input-field col s10">
                                 <i class="mdi-action-lock-outline prefix"></i>
                                 <input id="password2" type="password" class="validate">
                                 <label for="password">Confirm Password</label>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col s12 modal-close">
-                                <a href="#" class="btn waves-effect waves-light col "><h6>Create Account</h6></a>
+                            <div class="input-field col s4 modal-close">
+                                <a href="#" class="btn waves-effect waves-light col"><h6>Create Account</h6></a>
+                            </div>
+                            <div class="input-field col s4 modal-close">
+                                <a href="#" class="btn waves-effect waves-light col" id="waves-red"><h6>Cancel</h6></a>
                             </div>
                         </div>
                     </form>
