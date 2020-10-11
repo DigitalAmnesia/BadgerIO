@@ -10,6 +10,10 @@ $(function(){
     $('.createAnAccount').html(createAcountContent);
     $('#createAccountTrig').attr('href','#createAccountModal').addClass('modal-trigger');
   
+    // *** OnClick Functions ***
+    $('.aboutButton').on('click', function(){
+        $('.homePageContainer').html(aboutContent);
+    });
     
     //initialize Materialize content last so that it is available
     $('.modal').modal(); //needed in order to initialize Materialize modals
@@ -21,8 +25,26 @@ $(function(){
 function testForMobile(){
     if (/Mobi|Android/i.test(navigator.userAgent)) {
         $('.brand-logo').removeAttr('id'); //centers the logo on mobile devices -- remember to refresh in inspector
+        //remove tab images since they do not wrap for mobile devices
     }
 }
+var aboutContent = 
+`<div class="card medium">
+<div class="card-image">
+  <img src="images/sample-1.jpeg">
+  <span class="card-title">Card Title</span>
+</div>
+<div class="card-content">
+  <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+</div>
+<div class="card-action">
+  <a href="#">This is a link</a>
+  <a href="#">This is a link</a>
+</div>
+</div>`;
+
+
+
 var modalz = 
 `<div id="modal1" class="modal">
     <div class="modal-content">
