@@ -165,7 +165,7 @@ var createAcountContent =
                             <div class="input-field col s4 modal-close">
                                 <a href="#" class="btn waves-effect waves-light col"><h6>Create Account</h6></a>
                             </div>
-                            <div class="input-field col s4 modal-close">
+                            <div class="input-field col s3 modal-close">
                                 <a href="#" class="btn waves-effect waves-light col" id="waves-red"><h6>Cancel</h6></a>
                             </div>
                         </div>
