@@ -40,8 +40,8 @@ var aboutContent =
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-            <a href="#">This is a link</a>
-            <a href="#">This is a link</a>
+            <a href="#"><i class="fab fa-github"></i>GitHub</a>
+            <a href="#"><i class="fas fa-user"></i>This is a link</a>
         </div>
     </div>
     <div class="card medium" id="Mike-Card">
@@ -53,8 +53,8 @@ var aboutContent =
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-            <a href="#">This is a link</a>
-            <a href="#">This is a link</a>
+            <a href="#"><i class="fab fa-github"></i>GitHub</a>
+            <a href="#"><i class="fas fa-user"></i>This is a link</a>
         </div>
     </div>
     <div class="card medium" id="Habby-Card">
@@ -66,8 +66,8 @@ var aboutContent =
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-            <a href="#">This is a link</a>
-            <a href="#">This is a link</a>
+            <a href="#"><i class="fab fa-github"></i>GitHub</a>
+            <a href="#"><i class="fas fa-user"></i>This is a link</a>
         </div>
     </div>
     <div class="card medium" id="Elijah-Card">
@@ -79,8 +79,8 @@ var aboutContent =
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-            <a href="#">This is a link</a>
-            <a href="#">This is a link</a>
+            <a href="#"><i class="fab fa-github"></i>GitHub</a>
+            <a href="#"><i class="fas fa-user"></i>This is a link</a>
         </div>
     </div>
 </div>`;
