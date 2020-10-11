@@ -30,7 +30,8 @@ function testForMobile(){
     }
 }
 var aboutContent = 
-`<div class="aboutContainer">
+`<h4 class="center-header">Site Developers</h4>
+<div class="aboutContainer">
     <div class="card medium" id="Bennett-Card">
         <div class="card-image">
             <img src="images/sample-1.jpeg">
@@ -40,8 +41,8 @@ var aboutContent =
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-            <a href="#"><i class="fab fa-github"></i>GitHub</a>
-            <a href="#"><i class="fas fa-user"></i>This is a link</a>
+            <a href="#"><i class="fab fa-github"></i>&nbspGitHub</a>
+            <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
         </div>
     </div>
     <div class="card medium" id="Mike-Card">
@@ -53,8 +54,8 @@ var aboutContent =
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-            <a href="#"><i class="fab fa-github"></i>GitHub</a>
-            <a href="#"><i class="fas fa-user"></i>This is a link</a>
+            <a href="#"><i class="fab fa-github"></i>&nbspGitHub</a>
+            <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
         </div>
     </div>
     <div class="card medium" id="Habby-Card">
@@ -66,8 +67,8 @@ var aboutContent =
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-            <a href="#"><i class="fab fa-github"></i>GitHub</a>
-            <a href="#"><i class="fas fa-user"></i>This is a link</a>
+            <a href="#"><i class="fab fa-github"></i>&nbspGitHub</a>
+            <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
         </div>
     </div>
     <div class="card medium" id="Elijah-Card">
@@ -79,10 +80,19 @@ var aboutContent =
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
         <div class="card-action">
-            <a href="#"><i class="fab fa-github"></i>GitHub</a>
-            <a href="#"><i class="fas fa-user"></i>This is a link</a>
+            <a href="#"><i class="fab fa-github"></i>&nbspGitHub</a>
+            <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
         </div>
     </div>
+</div>
+<div class="featureList">
+    <ul class="collection with-header">
+        <li class="collection-header"><h4 class="center-header">Core Features</h4></li>
+        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+    </ul>
 </div>`;
     var modalz = 
     `<div id="modal1" class="modal">
