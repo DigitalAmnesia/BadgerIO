@@ -21,6 +21,7 @@ $(function(){
 
     // $('#modal1').modal('open'); //one useful way to fire a modal programaticly without an event listener such as winning a game
 });
+
 //checks if the user is on a mobile device and if so enters past the control statement
 function testForMobile(){
     if (/Mobi|Android/i.test(navigator.userAgent)) {
@@ -29,32 +30,70 @@ function testForMobile(){
     }
 }
 var aboutContent = 
-`<div class="card medium">
-<div class="card-image">
-  <img src="images/sample-1.jpeg">
-  <span class="card-title">Card Title</span>
-</div>
-<div class="card-content">
-  <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-</div>
-<div class="card-action">
-  <a href="#">This is a link</a>
-  <a href="#">This is a link</a>
-</div>
-</div>`;
-
-
-
-var modalz = 
-`<div id="modal1" class="modal">
-    <div class="modal-content">
-        <h4>Modal Header</h4>
-        <p>A bunch of text</p>
+`<div class="aboutContainer">
+    <div class="card medium" id="Bennett-Card">
+        <div class="card-image">
+            <img src="images/sample-1.jpeg">
+            <span class="card-title">Bennett Gould</span>
+        </div>
+        <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+            <a href="#">This is a link</a>
+            <a href="#">This is a link</a>
+        </div>
     </div>
-    <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    <div class="card medium" id="Mike-Card">
+        <div class="card-image">
+            <img src="images/sample-1.jpeg">
+            <span class="card-title">Mike Hill</span>
+        </div>
+        <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+            <a href="#">This is a link</a>
+            <a href="#">This is a link</a>
+        </div>
+    </div>
+    <div class="card medium" id="Habby-Card">
+        <div class="card-image">
+            <img src="images/sample-1.jpeg">
+            <span class="card-title">Habby Olusesi</span>
+        </div>
+        <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+            <a href="#">This is a link</a>
+            <a href="#">This is a link</a>
+        </div>
+    </div>
+    <div class="card medium" id="Elijah-Card">
+        <div class="card-image">
+            <img src="images/sample-1.jpeg">
+            <span class="card-title">Elijah Melanson</span>
+        </div>
+        <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+            <a href="#">This is a link</a>
+            <a href="#">This is a link</a>
+        </div>
     </div>
 </div>`;
+    var modalz = 
+    `<div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>`;
 var createAcountContent =
 `<div id="createAccountModal" class="modal">
     <div class="row modal-content">
