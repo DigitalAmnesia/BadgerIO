@@ -15,7 +15,7 @@ $(function(){
         $('.homePageContainer').html(aboutContent);
     });
     $('.signInFirebase').on('click', function(){
-        // event.preventDefault();
+        checkIfLocal();
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function(result) {
             // This gives you a Google Access Token. You can use it to access the Google API.
@@ -43,7 +43,13 @@ $(function(){
 
     // $('#modal1').modal('open'); //one useful way to fire a modal programaticly without an event listener such as winning a game
 });
-
+//Call this function if you want to remind the developer that they are running the code locally and a certain feature may not work 
+//the same way as when running on GitHub Pages
+function checkIfLocal(){
+    if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === ""){
+        alert("Google Sign in only works from HTTP/S, not local!");//reminder to devs
+    }
+}
 //checks if the user is on a mobile device and if so enters past the control statement
 function testForMobile(){
     if (/Mobi|Android/i.test(navigator.userAgent)) {
