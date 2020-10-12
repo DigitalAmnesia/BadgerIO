@@ -14,5 +14,29 @@
 /* used to maximize modal area to make forms look better */
 .modal {
     width: 60% !important; 
-    max-height: 80% !important;
+    max-height: 90% !important;
+}
+.card {
+    width: 20%;
+    margin: 1%;
+}
+.aboutContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center-header {
+    text-align: center;
+}
+.featureList {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row {
+    margin-bottom: 5px;
+}
+#waves-red {
+    background-color: rgba(207, 0, 15, .8);
 }
