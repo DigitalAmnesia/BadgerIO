@@ -1,7 +1,15 @@
 // var domain = "digg.com";
+/**
+ * Returned JSON object from hunterIO API call
+ * @type {JSON}
+ */
 var email_Source_List = {};
-
-function hunterIO (domain) {
+/**
+ * Hunter API call that finds plain text emails from queried domain
+ * @param {string} domain - a domain provided by the user
+ * @example hunterIO('www.yahoo.com');
+ */
+function hunterIO(domain) {
     var api_key = "e56287fadf01a9610b2c26209a772ffc0832c728";
     var email_finder = `https://api.hunter.io/v2/domain-search?domain=${domain}&api_key=${api_key}`;
     // This .on("click") function will trigger the AJAX Call

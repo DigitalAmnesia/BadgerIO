@@ -17,6 +17,7 @@ $(function(){
     $('.aboutButton').on('click', function(){
         $('.homePageContainer').html(aboutContent);
     });
+    
     $('.signInFirebase').on('click', function(){
         checkIfLocal();
         var provider = new firebase.auth.GoogleAuthProvider();
@@ -38,8 +39,8 @@ $(function(){
     $('.sidenav').sidenav(); //needed in order to initialize side bar for mobile menu
 });
 /**
- * Call this function if you want to remind the developer that they are running the code locally and a certain feature may not work 
- * the same way as when running on GitHub Pages
+ * Call this function if you want to remind developers that they are running code locally and certain features may not work 
+ * the same way as when running on server
 */
 function checkIfLocal(){
     if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === ""){
@@ -69,6 +70,7 @@ function testForMobile(){
     }
 }
 /**
+ * About page HTML content
  * @type {template literal}
  */
 var aboutContent = 
@@ -137,6 +139,7 @@ var aboutContent =
     </ul>
 </div>`;
 /**
+ * Example modal HTML
  * @type {template literal}
  */
 var modalz = 
@@ -150,6 +153,7 @@ var modalz =
         </div>
     </div>`;
 /**
+ * Create An Account modal HTML 
  * @type {template literal}
  */
 var createAcountContent =
