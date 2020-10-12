@@ -1,3 +1,11 @@
+$(document).ready(function(){
+    $('#modal1').modal();
+    $('#modal1').modal('open');
+    $('#cls').click(function(){
+        $('#modal1').modal('close');                   
+   });
+
+
 //Here is where we can use jQuery to dynamically insert addiontal HTML pages into the primary page
 //using $('.class').load('htmlFileName.html');
 //this will allow for much cleaner front end development without useing a templater like handlebars
@@ -175,3 +183,5 @@ var createAcountContent =
         </div>
       </div>
 </div>`;
+
+});
