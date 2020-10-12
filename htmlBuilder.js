@@ -36,7 +36,7 @@ $(function(){
             // ...
           });
     });
-
+    //test
     //initialize Materialize content last so that it is available
     $('.modal').modal(); //needed in order to initialize Materialize modals
     $('.sidenav').sidenav(); //needed in order to initialize side bar for mobile menu
