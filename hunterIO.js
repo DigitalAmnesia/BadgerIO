@@ -4,6 +4,8 @@
  * @type {JSON}
  */
 var email_Source_List = {};
+//Hey Mike, you may want to use a local variable using 'let' in side the function and return that then you can just have
+//hunterIO(domain) in place of email_Source_List then you don't have to worry about setting and returning another variable 
 /**
  * Hunter API call that finds plain text emails from queried domain
  * @param {string} domain - a domain provided by the user
