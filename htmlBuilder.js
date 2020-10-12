@@ -5,8 +5,10 @@
 //         $('#modal1').modal('close');                   
 //    });
 
+//paint slideshow
+var slideIndex = 1;
+showSlides(slideIndex);
 // Here is where we can use jQuery to dynamically insert addiontal HTML pages into the primary page
-// $(function()) is equivalent to $(document).ready()
 $(function(){
     testForMobile();
     $('.modalContent').html(modalz);
@@ -23,10 +25,66 @@ $(function(){
     $('.modal').modal(); //needed in order to initialize Materialize modals
     $('.sidenav').sidenav(); //needed in order to initialize side bar for mobile menu
 });
-
+/**
+ * Dots action, iterates slide show 
+ * @param {number} n 
+ * @return {void}
+ */
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+/**
+ * Iterates Slide Show to next slide
+ * @param {number} n 
+ * @return {void}
+ */
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+/**
+ * Uses helper functions to determine which picture to paint after user actions performed
+ * @param {number} n 
+ * @return {void}
+ */
+function showSlides(n) {
+    var slides = $(".mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length){
+        slideIndex = 1;
+    }
+    if (n < 1){
+        slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace("active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += "active";
+} 
+/**
+ * Automatically cycles through slies on timer
+ * @return {void}
+ */
+function showSlidesAuto() {
+    slideIndex = 0;
+    var slides = $(".mySlides");
+    for (i = 0; i < slides.length; i++){
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length){
+        slideIndex = 1;
+    }
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
 /**
  * Call this function if you want to remind developers that they are running code locally and certain features may not work 
  * the same way as when running on server
+ * @return {void}
 */
 function checkIfLocal(){
     if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === ""){
@@ -37,6 +95,7 @@ function checkIfLocal(){
 //TODO: getKeys() not working, figure out a way to load API keys from .gitignored file for local testing
 /**
  * This is a function for getting API keys when running locally, it reads in the APIkeys2.txt file
+ * @return {string[]}
  */
 function getKeys(){
     let file = $('<file>').attr('href','file:APIkeys2.txt');
@@ -49,6 +108,7 @@ function getKeys(){
 }
 /**
  * Checks if the user is on a mobile device and if so enters past the control statement
+ * @return {void}
  */
 function testForMobile(){
     if (/Mobi|Android/i.test(navigator.userAgent)) {
@@ -56,50 +116,6 @@ function testForMobile(){
         //remove tab images since they do not wrap for mobile devices
     }
 }
-//slider js
-// var slideIndex = 0;
-// showSlides();
-
-// function showSlides() {
-//   var i;
-//   var slides = document.getElementsByClassName("mySlides");
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   slideIndex++;
-//   if (slideIndex > slides.length) {slideIndex = 1}
-//   slides[slideIndex-1].style.display = "block";
-//   setTimeout(showSlides, 5000); // Change image every 2 seconds
-// } 
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-} 
-//add logic so that if picture color is white, change displayed text overlay to black 
 /**
  * About page HTML content
  * @type {template literal}
