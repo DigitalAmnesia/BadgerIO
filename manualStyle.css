@@ -43,16 +43,17 @@
 #pageTemplateContainer {
     border:4px solid #00897b; 
 }
+/* for sticky footer */
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
-
+/* for sticky footer */
 main {
     flex: 1 0 auto;
 }
-/* CSS for slider */
+/* ***CSS for slider*** */
 * {box-sizing:border-box}
 
 /* Slideshow container */
