@@ -183,5 +183,3 @@ var createAcountContent =
         </div>
       </div>
 </div>`;
-
-});
