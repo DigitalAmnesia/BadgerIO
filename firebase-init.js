@@ -13,3 +13,21 @@
 firebase.initializeApp(firebaseConfig);// Initialize Firebase
 // firebase.analytics();
 
+$(function(){
+    $('.signInFirebase').on('click', function(){
+        checkIfLocal();
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithPopup(provider).then(function(result) {
+            var token = result.credential.accessToken;// This gives you a Google Access Token. You can use it to access the Google API.
+            var user = result.user;// The signed-in user info.
+        }).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            console.log('errorCode: ', errorCode);
+            var errorMessage = error.message;
+            console.log('errorMessage: ', errorMessage);
+            var email = error.email;// The email of the user's account used.
+            var credential = error.credential;// The firebase.auth.AuthCredential type that was used.
+        });
+    });
+});

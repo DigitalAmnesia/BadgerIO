@@ -6,6 +6,7 @@
 //    });
 
 // Here is where we can use jQuery to dynamically insert addiontal HTML pages into the primary page
+// $(function()) is equivalent to $(document).ready()
 $(function(){
     testForMobile();
     $('.modalContent').html(modalz);
@@ -13,31 +14,16 @@ $(function(){
     $('.createAnAccount').html(createAcountContent);
     $('#createAccountTrig').attr('href','#createAccountModal').addClass('modal-trigger');
   
-    // *** OnClick Functions ***
+    // *** On Click Functions ***
     $('.aboutButton').on('click', function(){
         $('.homePageContainer').html(aboutContent);
     });
-    
-    $('.signInFirebase').on('click', function(){
-        checkIfLocal();
-        var provider = new firebase.auth.GoogleAuthProvider();
-        firebase.auth().signInWithPopup(provider).then(function(result) {
-            var token = result.credential.accessToken;// This gives you a Google Access Token. You can use it to access the Google API.
-            var user = result.user;// The signed-in user info.
-        }).catch(function(error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            console.log('errorCode: ', errorCode);
-            var errorMessage = error.message;
-            console.log('errorMessage: ', errorMessage);
-            var email = error.email;// The email of the user's account used.
-            var credential = error.credential;// The firebase.auth.AuthCredential type that was used.
-        });
-    });
-    //initialize Materialize content last so that it is available
+
+    //initialize Materialize content last so that it is rendered
     $('.modal').modal(); //needed in order to initialize Materialize modals
     $('.sidenav').sidenav(); //needed in order to initialize side bar for mobile menu
 });
+
 /**
  * Call this function if you want to remind developers that they are running code locally and certain features may not work 
  * the same way as when running on server
@@ -48,11 +34,12 @@ function checkIfLocal(){
         getKeys();
     }
 }
+//TODO: getKeys() not working, figure out a way to load API keys from .gitignored file for local testing
 /**
- * This is a function for getting API keys when running locally, it reads in the APIkeys.txt file
+ * This is a function for getting API keys when running locally, it reads in the APIkeys2.txt file
  */
 function getKeys(){
-    let file = $('<file>').attr('href','file:APIkeys.txt');
+    let file = $('<file>').attr('href','file:APIkeys2.txt');
     let reader = new FileReader();
     reader.addEventListener('load', function(e){
         let text = e.target.result;
@@ -139,7 +126,7 @@ var aboutContent =
     </ul>
 </div>`;
 /**
- * Example modal HTML
+ * Example modal HTML content
  * @type {template literal}
  */
 var modalz = 
@@ -153,7 +140,7 @@ var modalz =
         </div>
     </div>`;
 /**
- * Create An Account modal HTML 
+ * Create An Account modal HTML content
  * @type {template literal}
  */
 var createAcountContent =
