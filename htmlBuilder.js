@@ -5,12 +5,7 @@
 //         $('#modal1').modal('close');                   
 //    });
 
-
-//Here is where we can use jQuery to dynamically insert addiontal HTML pages into the primary page
-//using $('.class').load('htmlFileName.html');
-//this will allow for much cleaner front end development without useing a templater like handlebars
-// $('.modalContent').load('modalExample.html body');
-// $('#modalTrigger').attr('href','#modal1')
+// Here is where we can use jQuery to dynamically insert addiontal HTML pages into the primary page
 $(function(){
     testForMobile();
     $('.modalContent').html(modalz);
@@ -26,45 +21,56 @@ $(function(){
         checkIfLocal();
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider).then(function(result) {
-            // This gives you a Google Access Token. You can use it to access the Google API.
-            var token = result.credential.accessToken;
-            // The signed-in user info.
-            var user = result.user;
-            // ...
-          }).catch(function(error) {
+            var token = result.credential.accessToken;// This gives you a Google Access Token. You can use it to access the Google API.
+            var user = result.user;// The signed-in user info.
+        }).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
             console.log('errorCode: ', errorCode);
             var errorMessage = error.message;
             console.log('errorMessage: ', errorMessage);
-            // The email of the user's account used.
-            var email = error.email;
-            // The firebase.auth.AuthCredential type that was used.
-            var credential = error.credential;
-            // ...
-          });
+            var email = error.email;// The email of the user's account used.
+            var credential = error.credential;// The firebase.auth.AuthCredential type that was used.
+        });
     });
-    //test
     //initialize Materialize content last so that it is available
     $('.modal').modal(); //needed in order to initialize Materialize modals
     $('.sidenav').sidenav(); //needed in order to initialize side bar for mobile menu
-
-    // $('#modal1').modal('open'); //one useful way to fire a modal programaticly without an event listener such as winning a game
 });
-//Call this function if you want to remind the developer that they are running the code locally and a certain feature may not work 
-//the same way as when running on GitHub Pages
+/**
+ * Call this function if you want to remind the developer that they are running the code locally and a certain feature may not work 
+ * the same way as when running on GitHub Pages
+*/
 function checkIfLocal(){
     if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === ""){
         alert("Google Sign in only works from HTTP/S, not local!");//reminder to devs
+        getKeys();
     }
 }
-//checks if the user is on a mobile device and if so enters past the control statement
+/**
+ * This is a function for getting API keys when running locally, it reads in the APIkeys.txt file
+ */
+function getKeys(){
+    let file = $('<file>').attr('href','file:APIkeys.txt');
+    let reader = new FileReader();
+    reader.addEventListener('load', function(e){
+        let text = e.target.result;
+        alert(text);
+    });
+    reader.readAsText(file);
+}
+/**
+ * Checks if the user is on a mobile device and if so enters past the control statement
+ */
 function testForMobile(){
     if (/Mobi|Android/i.test(navigator.userAgent)) {
         $('.brand-logo').removeAttr('id'); //centers the logo on mobile devices -- remember to refresh in inspector
         //remove tab images since they do not wrap for mobile devices
     }
 }
+/**
+ * @type {template literal}
+ */
 var aboutContent = 
 `<h4 class="center-header">Site Developers</h4>
 <div class="aboutContainer">
@@ -130,7 +136,10 @@ var aboutContent =
         <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
     </ul>
 </div>`;
-    var modalz = 
+/**
+ * @type {template literal}
+ */
+var modalz = 
     `<div id="modal1" class="modal">
         <div class="modal-content">
             <h4>Modal Header</h4>
@@ -140,6 +149,9 @@ var aboutContent =
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
         </div>
     </div>`;
+/**
+ * @type {template literal}
+ */
 var createAcountContent =
 `<div id="createAccountModal" class="modal">
     <div class="row modal-content">
