@@ -40,8 +40,12 @@
 #waves-red {
     background-color: rgba(207, 0, 15, .8);
 }
+/* set constant border around page */
 #pageTemplateContainer {
     border:4px solid #00897b; 
+    margin-bottom: .5rem !important;
+    min-width: 97.5vw;
+    max-width: 97.5vw;
 }
 /* for sticky footer */
 body {
@@ -54,6 +58,7 @@ main {
     flex: 1 0 auto;
 }
 /* ***CSS for slider*** */
+
 * {box-sizing:border-box}
 
 /* Slideshow container */
