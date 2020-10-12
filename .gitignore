@@ -3,6 +3,8 @@
 .AppleDouble
 .LSOverride
 .localized
-
+#best practice for Widows devices
+Thumbs.db
+ehthumbs.db
 #specific files
 APIkeys2.txt
