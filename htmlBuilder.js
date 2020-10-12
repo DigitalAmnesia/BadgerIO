@@ -1,9 +1,9 @@
-$(document).ready(function(){
-    $('#modal1').modal();
-    $('#modal1').modal('open');
-    $('#cls').click(function(){
-        $('#modal1').modal('close');                   
-   });
+// $(document).ready(function(){
+//     $('#modal1').modal();
+//     $('#modal1').modal('open');
+//     $('#cls').click(function(){
+//         $('#modal1').modal('close');                   
+//    });
 
 
 //Here is where we can use jQuery to dynamically insert addiontal HTML pages into the primary page
