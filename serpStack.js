@@ -1,8 +1,21 @@
-
+/**
+ * Returned JSON object from serpStackOrganic API call
+ * @type {JSON}
+ */
 var sitePDFS = {};
+/**
+ * Returned JSON object from serpStackPDF API call
+ * @type {JSON}
+ */
 var siteIndex = {};
 
 // This .on("click") function will trigger the AJAX Call
+/**
+ * serpStackOrganic call that gets organic information about the domain
+ * @param {string} domain - a domain provided by the user
+ * @return {JSON} object containing email addresses
+ * @example serpStackOrganic('www.yahoo.com');
+ */
 function serpStackOrganic (domain) {
   // Here we grab the text from the input box
   var domain = $("#domain-input").val();
@@ -19,7 +32,12 @@ function serpStackOrganic (domain) {
   });
   return siteIndex;
 };
-
+/**
+ * serpStackPDF call that gets PDF information about the domain
+ * @param {string} domain - a domain provided by the user
+ * @return {JSON} object containing email addresses
+ * @example serpStackPDF('www.yahoo.com');
+ */
 function serpStackPDF (domain) {
   // Here we grab the text from the input box
   var domain = $("#domain-input").val();

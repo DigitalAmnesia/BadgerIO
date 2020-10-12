@@ -7,6 +7,7 @@ var email_Source_List = {};
 /**
  * Hunter API call that finds plain text emails from queried domain
  * @param {string} domain - a domain provided by the user
+ * @return {JSON} object containing email addresses
  * @example hunterIO('www.yahoo.com');
  */
 function hunterIO(domain) {
