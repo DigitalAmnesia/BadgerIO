@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEOtracker</title>
-    <!-- CSS RESET added for best practice -->
-    <link rel="stylesheet" href="reset.css">
-    <!-- Materialize - Compressed CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Manual Override CSS -->
-    <link rel="stylesheet" href="manualStyle.css">
-    <script src="https://kit.fontawesome.com/7fcf630873.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEOtracker</title>
+  <!-- CSS RESET added for best practice -->
+  <link rel="stylesheet" href="reset.css">
+  <!-- Materialize - Compressed CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Manual Override CSS -->
+  <link rel="stylesheet" href="manualStyle.css">
+  <script src="https://kit.fontawesome.com/7fcf630873.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <nav class="nav-extended teal darken-1">
         <div class="nav-wrapper">
@@ -76,10 +78,19 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 
-    <!-- Materialize - Compressed JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
     <script src="htmlBuilder.js"></script>
     <script src=serpStack.js></script>
+  <!-- Materialize - Compressed JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Stub AJAX call.  Note that we cannot make AJAX calls to local file paths as this would be a security flaw.  Chrome doesn't allow it.-->
+  <script type="text/javascript" src="demoQueryV1.json">
+    // $.ajax({
+    //   type: 'GET',
+    //   dataType: 'json',
+    //   url: '/DemoQueryV1.JSON',
+    // }).then(function displayTheThings() { });
+  </script>
 </body>
+
 </html>
