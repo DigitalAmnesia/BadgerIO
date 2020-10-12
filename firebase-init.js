@@ -13,6 +13,8 @@
 firebase.initializeApp(firebaseConfig);// Initialize Firebase
 // firebase.analytics();
 
+//add recaptcha wall before new user sign in and all other forms
+
 $(function(){
     $('.signInFirebase').on('click', function(){
         checkIfLocal();

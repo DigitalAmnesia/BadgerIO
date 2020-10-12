@@ -31,7 +31,7 @@ $(function(){
 function checkIfLocal(){
     if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === ""){
         alert("Google Sign in only works from HTTP/S, not local!");//reminder to devs
-        getKeys();
+        //getKeys();
     }
 }
 //TODO: getKeys() not working, figure out a way to load API keys from .gitignored file for local testing
@@ -229,3 +229,4 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 } 
+//add logic so that if picture color is white, change displayed text overlay to black 

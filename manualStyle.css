@@ -47,6 +47,10 @@
     min-width: 97.5vw;
     max-width: 97.5vw;
 }
+.footer-li {
+    float: left;
+
+}
 /* for sticky footer */
 body {
     display: flex;
