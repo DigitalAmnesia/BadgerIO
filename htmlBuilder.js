@@ -1,9 +1,8 @@
 // $(document).ready(function(){
 //     $('#modal1').modal();
-//     $('#modal1').modal('open');
-//     $('#cls').click(function(){
-//         $('#modal1').modal('close');                   
+//     $('#modal1').modal('open');              
 //    });
+
 
 //paint slideshow
 var slideIndex = 1;
@@ -126,9 +125,7 @@ var aboutContent =
 `<h4 class="center-header">Site Developers</h4>
 
 <div class = "container" id="aboutContainer">
-
     <div class = "row">
-
         <div class = "col l3">
             <div class="card medium" id="Bennett-Card">
                 <div class="card-image">
@@ -144,7 +141,6 @@ var aboutContent =
                 </div>
             </div>
         </div>
-
         <div class = "col l3">
             <div class="card medium" id="Mike-Card">
                 <div class="card-image">
@@ -160,8 +156,6 @@ var aboutContent =
                 </div>
             </div>
         </div>
-        
-
         <div class = "col l3">
             <div class="card medium" id="Habby-Card">
                 <div class="card-image">
@@ -177,8 +171,6 @@ var aboutContent =
                 </div>
             </div>
         </div>
-        
-
         <div class = "col l3">
             <div class="card medium" id="Elijah-Card">
                 <div class="card-image">
@@ -194,17 +186,15 @@ var aboutContent =
                 </div>
             </div>
         </div>
-
     </div>
-
 </div>
 <div class="featureList">
     <ul class="collection with-header">
         <li class="collection-header"><h4 class="center-header">Core Features</h4></li>
-        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
-        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
-        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
-        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</a></div></li>
     </ul>
 </div>`;
 /**

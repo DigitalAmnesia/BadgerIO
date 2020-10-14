@@ -12,34 +12,59 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- Manual Override CSS -->
   <link rel="stylesheet" href="manualStyle.css">
+  <!-- Collapsed Icon for Navbar -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Font Awesome dependency -->
   <script src="https://kit.fontawesome.com/7fcf630873.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="nav-extended teal darken-1">
-        <div class="nav-wrapper">
-          <a href="index.html" class="brand-logo" id="home-page-logo">SEO Tracker</a>
-          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="aboutButton" href="#">About</a></li>
-            <li><a id="createAccountTrig" href="#">Create Account</a></li>
-            <li><a class="log-in-black" id="signInFirebase" href="#">Log In</a></li>
+  <!-- <div class = "container" id = "modalContainer">
+    <div class = "row">
+      <div class = "col 12">
+        <div id="modal1" class="modal1">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class = "container" id = "navContainer">
+    <div class = "row">
+      <div class = "col 12">
+        <div class="navbar-fixed">
+          <nav class="nav-extended teal darken-1">           
+            <div class="nav-wrapper">
+              <a href="index.html" class="brand-logo" id="home-page-logo">SEO Tracker</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a class="aboutButton" href="#">About</a></li>
+                <li><a id="createAccountTrig" href="#">Create Account</a></li>
+                <li><a class="log-in-black" id="signInFirebase" href="#">Log In</a></li>
+              </ul>
+            </div>
+            <div class="nav-content">
+              <ul class="tabs tabs-transparent">
+                <li class="tab"><a href="#"><i class="fas fa-flask"></i> Test 1</a></li>
+                <li class="tab"><a href="#"><i class="fas fa-flask"></i> Test 2</a></li>
+                <li class="tab"><a href="#"><i class="fas fa-flask"></i> Test 3</a></li>
+                <li class="tab"><a id="modalTrigger" href="#"><i class="fas fa-file-contract"></i> Fire Modal</a></li>
+              </ul>
+            </div>
+          </nav>
+          <ul class="sidenav teal accent-3" id="mobile-demo">
+              <li><a class="largerMobile btn" href="#">About</a></li>
+              <li><a class="largerMobile btn" href="#">Create Account</a></li>
+              <li><a class="largerMobile btn log-in-black" href="#">Log In</a></li>
           </ul>
         </div>
-        <div class="nav-content">
-          <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="#"><i class="fas fa-flask"></i> Test 1</a></li>
-            <li class="tab"><a href="#"><i class="fas fa-flask"></i> Test 2</a></li>
-            <li class="tab"><a href="#"><i class="fas fa-flask"></i> Test 3</a></li>
-            <li class="tab"><a id="modalTrigger" href="#"><i class="fas fa-file-contract"></i> Fire Modal</a></li>
-          </ul>
-        </div>
-      </nav>
-    <ul class="sidenav teal accent-3" id="mobile-demo">
-        <li><a class="largerMobile btn" href="#">About</a></li>
-        <li><a class="largerMobile btn" href="#">Create Account</a></li>
-        <li><a class="largerMobile btn log-in-black" href="#">Log In</a></li>
-    </ul>
+      </div>
+    </div>
+  </div>
   <!-- Create an Account Modal-->
   <div class="createAnAccount"></div>
   <!-- Log In Modal -->
@@ -47,11 +72,13 @@
   <!-- Fire Modal example dynamically filled from htmlBuilder.js -->
   <div class="modalContent"></div>
   <!-- Main Page Template - everything else get added inside of the homePageContainer -->
-  <div class="row">
-    <div class="col s12">
-      <div class="card-panel white" id="pageTemplateContainer">
-        <div class="homePageContainer">
-            <div id="slideShowAndDots"> 
+  <div class = "homePageContainer">
+    <div class="row">
+      <div class="col l12">
+        <div class = "row">
+          <div class = "col l10">
+            <div class="card-panel white" id="pageTemplateContainer">
+              <div id="slideShowAndDots"> 
                 <div class="slideshow-container">
                   <!-- Full-width images with number and caption text -->
                   <div class="mySlides fade">
@@ -80,7 +107,17 @@
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
-            </div> 
+              </div> 
+            </div>
+          </div>
+          <div class="col l2 hide-on-small-only">
+            <ul class="section table-of-contents fixed" id = "scrollBar">
+              <li><a href="#slideShowAndDots">Slides</a></li>
+              <li><a href="#slideShowAndDots">Section2</a></li>
+              <li><a href="#slideShowAndDots">Section3</a></li>
+              <li><a href="#slideShowAndDots">Section4</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
