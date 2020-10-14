@@ -228,12 +228,13 @@ var logInModalContent =
                                 <input class='validate' type='password' id='password'>
                                 <label for='password' class="changeFormTransitionBehavior">Enter your password</label>
                             </div>
-                            <label style='float: right;'><a class='red-text' href='#!'><b>Forgot Password?</b></a></label>
                         </div>
-                        <br />
                         <center>
                             <div class='row'>
                             <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect teal darken-1'>Login</button>
+                            </div>
+                            <div class="row">
+                            <label><a class='red-text' href='#!'>Forgot Password?</a></label>
                             </div>
                         </center>
                     </form>
