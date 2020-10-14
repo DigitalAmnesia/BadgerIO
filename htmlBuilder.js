@@ -15,6 +15,8 @@ $(function(){
     $('#modalTrigger').attr('href','#modal1').addClass('modal-trigger');
     $('.createAnAccount').html(createAcountContent);
     $('#createAccountTrig').attr('href','#createAccountModal').addClass('modal-trigger');
+    $('.logInModal').html(logInModalContent);
+    $('#signInFirebase').attr('href','#logInModal').addClass('modal-trigger');
   
     // *** On Click Functions ***
     $('.aboutButton').on('click', function(){
@@ -48,7 +50,7 @@ function plusSlides(n) {
  */
 function showSlides(n) {
     var slides = $(".mySlides");
-    var dots = document.getElementsByClassName("dot");
+    var dots = $(".dot");
     if (n > slides.length){
         slideIndex = 1;
     }
@@ -59,10 +61,10 @@ function showSlides(n) {
         slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("active", "");
+        dots[i].className = dots[i].className.replace(" active", "");//space before active needed
     }
     slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += "active";
+    dots[slideIndex-1].className += " active";//space before active needed
 } 
 /**
  * Automatically cycles through slies on timer
@@ -199,6 +201,19 @@ var modalz =
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
         </div>
     </div>`;
+var logInModalContent = 
+`<div id="logInModal" class="modal">
+    <div class="row modal-content">
+        <h5 class="center-header">SEO Tracker</h5>
+            <div class="col s12">
+                <div class="card-panel">
+                    <div class="row">
+                            
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>`;
 /**
  * Create An Account modal HTML content
  * @type {template literal}

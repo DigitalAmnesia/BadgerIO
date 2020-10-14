@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +15,6 @@
   <!-- Font Awesome dependency -->
   <script src="https://kit.fontawesome.com/7fcf630873.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <nav class="nav-extended teal darken-1">
         <div class="nav-wrapper">
@@ -25,7 +23,7 @@
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a class="aboutButton" href="#">About</a></li>
             <li><a id="createAccountTrig" href="#">Create Account</a></li>
-            <li><a class="log-in-black signInFirebase" href="#">Log In</a></li>
+            <li><a class="log-in-black" id="signInFirebase" href="#">Log In</a></li>
           </ul>
         </div>
         <div class="nav-content">
@@ -42,19 +40,10 @@
         <li><a class="largerMobile btn" href="#">Create Account</a></li>
         <li><a class="largerMobile btn log-in-black" href="#">Log In</a></li>
     </ul>
-
-  <!-- <div id="modal1" class="modal1">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div> -->
-
   <!-- Create an Account Modal-->
   <div class="createAnAccount"></div>
+  <!-- Log In Modal -->
+  <div class="logInModal"></div>
   <!-- Fire Modal example dynamically filled from htmlBuilder.js -->
   <div class="modalContent"></div>
   <!-- Main Page Template - everything else get added inside of the homePageContainer -->
@@ -80,7 +69,6 @@
                       <img src="images/img3.jpg" style="width:100%">
                       <div class="text">Caption Three</div>
                   </div>
-              
                   <!-- Next and previous buttons -->
                   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                   <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -123,7 +111,7 @@
     </div>
   </footer>
 
-  <!-- jQuery -->
+  <!-- jQuery needed here for other dependencies -->
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
  
   <!-- ***** Firebase code begins, please do not move anything above ***** -->
