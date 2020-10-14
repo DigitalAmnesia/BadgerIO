@@ -222,6 +222,10 @@ var logInModalContent =
         </div>
     </div>
 </div>`;
+/**
+ * Option to login with email and password, dynamically added to modal after click event
+ * @type {template literal}
+ */
 var logInViaEmail = 
 `<center id="logInViaEmailContainer">
 <div class="container" id="logInEmailDropDown">
