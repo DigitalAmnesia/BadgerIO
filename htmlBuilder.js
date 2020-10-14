@@ -124,59 +124,79 @@ function testForMobile(){
  */
 var aboutContent = 
 `<h4 class="center-header">Site Developers</h4>
-<div class="aboutContainer">
-    <div class="card medium" id="Bennett-Card">
-        <div class="card-image">
-            <img src="images/sample-1.jpeg">
-            <span class="card-title">Bennett Gould</span>
+
+<div class = "container" id="aboutContainer">
+
+    <div class = "row">
+
+        <div class = "col l3">
+            <div class="card medium" id="Bennett-Card">
+                <div class="card-image">
+                    <img src="images/sample-1.jpeg">
+                    <span class="card-title">Bennett Gould</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="https://github.com/bpgould" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
+                    <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
+                </div>
+            </div>
         </div>
-        <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+
+        <div class = "col l3">
+            <div class="card medium" id="Mike-Card">
+                <div class="card-image">
+                    <img src="images/sample-1.jpeg">
+                    <span class="card-title">Mike Hill</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="https://github.com/DigitalAmnesia" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
+                    <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
+                </div>
+            </div>
         </div>
-        <div class="card-action">
-            <a href="https://github.com/bpgould" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
-            <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
+        
+
+        <div class = "col l3">
+            <div class="card medium" id="Habby-Card">
+                <div class="card-image">
+                    <img src="images/sample-1.jpeg">
+                    <span class="card-title">Habby Olusesi</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="https://github.com/habby-bit" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
+                    <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
+                </div>
+            </div>
         </div>
+        
+
+        <div class = "col l3">
+            <div class="card medium" id="Elijah-Card">
+                <div class="card-image">
+                    <img src="images/sample-1.jpeg">
+                    <span class="card-title">Elijah Melanson</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <a href="https://github.com/emelanson" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
+                    <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div class="card medium" id="Mike-Card">
-        <div class="card-image">
-            <img src="images/sample-1.jpeg">
-            <span class="card-title">Mike Hill</span>
-        </div>
-        <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-            <a href="https://github.com/DigitalAmnesia" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
-            <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
-        </div>
-    </div>
-    <div class="card medium" id="Habby-Card">
-        <div class="card-image">
-            <img src="images/sample-1.jpeg">
-            <span class="card-title">Habby Olusesi</span>
-        </div>
-        <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-            <a href="https://github.com/habby-bit" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
-            <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
-        </div>
-    </div>
-    <div class="card medium" id="Elijah-Card">
-        <div class="card-image">
-            <img src="images/sample-1.jpeg">
-            <span class="card-title">Elijah Melanson</span>
-        </div>
-        <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-            <a href="https://github.com/emelanson" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
-            <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
-        </div>
-    </div>
+
 </div>
 <div class="featureList">
     <ul class="collection with-header">
