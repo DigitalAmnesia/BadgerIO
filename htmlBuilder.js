@@ -201,17 +201,24 @@ var modalz =
             <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
         </div>
     </div>`;
+/**
+ * Log In modal offering different methods to login
+ * @type {template literal}
+ */
 var logInModalContent = 
 `<div id="logInModal" class="modal">
     <div class="row modal-content">
-        <h5 class="center-header">SEO Tracker</h5>
-            <div class="col s12">
-                <div class="card-panel">
-                    <div class="row">
-                            
-                    </div>
-                </div>
+    <h5 class="center-header">SEO Tracker</h5>
+        <div class="col s12">
+            <div class="row">
+                <div class="collection">
+                    <a href="#!" class="collection-item">Alvin</a>
+                    <a href="#!" class="collection-item active">Alvin</a>
+                    <a href="#!" class="collection-item">Alvin</a>
+                    <a href="#!" class="collection-item">Alvin</a>
+                </div>     
             </div>
+        </div>
     </div>
 </div>`;
 /**
