@@ -4,8 +4,6 @@ showSlides(slideIndex);
 // Here is where we can use jQuery to dynamically insert addiontal HTML pages into the primary page
 $(function(){
     testForMobile();
-    $('.modalContent').html(modalz);
-    $('#modalTrigger').attr('href','#modal1').addClass('modal-trigger');
     $('.createAnAccount').html(createAcountContent);
     $('#createAccountTrig').attr('href','#createAccountModal').addClass('modal-trigger');
     $('.logInModal').html(logInModalContent);
@@ -185,26 +183,12 @@ var aboutContent =
 <div class="featureList">
     <ul class="collection with-header">
         <li class="collection-header"><h4 class="center-header">Core Features</h4></li>
-        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
-        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
-        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
-        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspBadgeriO allows users to gather information about domains, save queries, and generate meaningful reports.<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspOnce logged in, you gain access to a modular, custom, reporting dashboard.<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAlvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAlvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
     </ul>
 </div>`;
-/**
- * Example modal HTML content
- * @type {template literal}
- */
-var modalz = 
-    `<div id="modal1" class="modal">
-        <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-        </div>
-    </div>`;
 /**
  * Log In modal offering different methods to login
  * @type {template literal}
