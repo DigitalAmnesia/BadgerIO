@@ -15,6 +15,7 @@ $(function(){
     $('.aboutButton').on('click', function(){
         $('.homePageContainer').html(aboutContent);
     });
+   
 
     //initialize Materialize content last so that it is rendered
     $('.modal').modal(); //needed in order to initialize Materialize modals
@@ -212,6 +213,33 @@ var logInModalContent =
                 </div>     
             </div>
         </div>
+        <center>
+            <div class="container">
+                <div class="z-depth-1 white row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+                    <form class="col s12">
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='email' id='email'>
+                                <label for='email' class="changeFormTransitionBehavior">Enter your email</label>
+                            </div>
+                        </div>
+                        <div class='row'>
+                            <div class='input-field col s12'>
+                                <input class='validate' type='password' id='password'>
+                                <label for='password' class="changeFormTransitionBehavior">Enter your password</label>
+                            </div>
+                            <label style='float: right;'><a class='red-text' href='#!'><b>Forgot Password?</b></a></label>
+                        </div>
+                        <br />
+                        <center>
+                            <div class='row'>
+                            <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect teal darken-1'>Login</button>
+                            </div>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </center>
     </div>
 </div>`;
 /**
@@ -244,23 +272,20 @@ var createAcountContent =
                     <form class="col s12 m12 l12">
                         <div class="row">
                             <div class="input-field col s10">
-                                <i class="mdi-communication-email prefix"></i>
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Your email</label>
+                                <input id="creatAccountEmail" type="email" class="validate">
+                                <label for="createAccountEmail" class="changeFormTransitionBehavior">Your email</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s10">
-                                <i class="mdi-action-lock-outline prefix"></i>
                                 <input id="password" type="password" class="validate">
-                                <label for="password">Password</label>
+                                <label for="password" class="changeFormTransitionBehavior">Password</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s10">
-                                <i class="mdi-action-lock-outline prefix"></i>
                                 <input id="password2" type="password" class="validate">
-                                <label for="password">Confirm Password</label>
+                                <label for="password2" class="changeFormTransitionBehavior">Confirm Password</label>
                             </div>
                         </div>
                         <div class="row">
