@@ -62,14 +62,17 @@ main {
     flex: 1 0 auto;
 }
 .logInOptions {
-    width: 50%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
 .logIn {
     text-align: center;
     font-size: x-large;
-    color: #00897b;
+    color: black !important;
+}
+.logInIcon {
+    float: left;
 }
 /* ***CSS for slider*** */
 

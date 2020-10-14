@@ -1,10 +1,3 @@
-// $(document).ready(function(){
-//     $('#modal1').modal();
-//     $('#modal1').modal('open');
-//     $('#cls').click(function(){
-//         $('#modal1').modal('close');                   
-//    });
-
 //paint slideshow
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -212,10 +205,10 @@ var logInModalContent =
         <div class="col s12">
             <div class="row">
                 <div class="collection logInOptions">
-                    <a class="collection-item logIn"><i class="fab fa-google" style="color:#DB4437;"></i>&nbspGoogle Sign In</a>
-                    <a class="collection-item logIn"><i class="fab fa-facebook-square" style="color:#3b5998;"></i>&nbspFacebook Sign In</a>
-                    <a class="collection-item logIn"><i class="fab fa-apple" style="color:#7D7D7D;"></i>&nbspApple Sign In</a>
-                    <a class="collection-item logIn"><i class="fas fa-envelope"></i>&nbspEmail Sign In</a>
+                    <a class="collection-item logIn"><i class="fab fa-google logInIcon" style="color:#DB4437;"></i>&nbspGoogle Sign In</a>
+                    <a class="collection-item logIn"><i class="fab fa-facebook-square logInIcon" style="color:#3b5998;"></i>&nbspFacebook Sign In</a>
+                    <a class="collection-item logIn"><i class="fab fa-apple logInIcon" style="color:#7D7D7D;"></i>&nbspApple Sign In</a>
+                    <a class="collection-item logIn"><i class="fas fa-envelope logInIcon"></i>&nbspEmail Sign In</a>
                 </div>     
             </div>
         </div>
@@ -225,7 +218,7 @@ var logInModalContent =
  * Log In Modal alternative design format, comment out '1' to use
  * @type {template literal}
  */
-var logInModalContent1 =
+var logInModalContentAlt =
 `<div id="logInModal" class="modal">
     <h5 class="center-header">SEO Tracker</h5>
     <div class="col s12 modal-content">
