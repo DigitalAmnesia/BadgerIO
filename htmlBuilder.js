@@ -118,6 +118,7 @@ function testForMobile(){
     if (/Mobi|Android/i.test(navigator.userAgent)) {
         $('.brand-logo').removeAttr('id'); //centers the logo on mobile devices -- remember to refresh in inspector
         //remove tab images since they do not wrap for mobile devices
+        $('#pageTemplateContainer').css('min-width','0vw');
     }
 }
 /**
