@@ -1,4 +1,4 @@
-{
+var demoQueryV1 = {
     "request": {
         "success": true,
         "total_time_taken": 1.5,

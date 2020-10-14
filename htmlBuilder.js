@@ -9,16 +9,21 @@
 var slideIndex = 1;
 showSlides(slideIndex);
 // Here is where we can use jQuery to dynamically insert addiontal HTML pages into the primary page
-$(function(){
+$(function () {
     testForMobile();
     $('.modalContent').html(modalz);
-    $('#modalTrigger').attr('href','#modal1').addClass('modal-trigger');
+    $('#modalTrigger').attr('href', '#modal1').addClass('modal-trigger');
     $('.createAnAccount').html(createAcountContent);
-    $('#createAccountTrig').attr('href','#createAccountModal').addClass('modal-trigger');
-  
+    $('#createAccountTrig').attr('href', '#createAccountModal').addClass('modal-trigger');
+
     // *** On Click Functions ***
-    $('.aboutButton').on('click', function(){
+    $('.aboutButton').on('click', function () {
         $('.homePageContainer').html(aboutContent);
+    });
+    // Site1 (demoQueryV1 display) On Click
+    $('.siteOne').on('click', function () {
+        $('.homePageContainer').html(searchOneContent);
+        displaySearchResults();
     });
 
     //initialize Materialize content last so that it is rendered
@@ -49,10 +54,10 @@ function plusSlides(n) {
 function showSlides(n) {
     var slides = $(".mySlides");
     var dots = document.getElementsByClassName("dot");
-    if (n > slides.length){
+    if (n > slides.length) {
         slideIndex = 1;
     }
-    if (n < 1){
+    if (n < 1) {
         slideIndex = slides.length;
     }
     for (i = 0; i < slides.length; i++) {
@@ -61,9 +66,9 @@ function showSlides(n) {
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace("active", "");
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += "active";
-} 
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += "active";
+}
 /**
  * Automatically cycles through slies on timer
  * @return {void}
@@ -71,14 +76,14 @@ function showSlides(n) {
 function showSlidesAuto() {
     slideIndex = 0;
     var slides = $(".mySlides");
-    for (i = 0; i < slides.length; i++){
+    for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slideIndex++;
-    if (slideIndex > slides.length){
+    if (slideIndex > slides.length) {
         slideIndex = 1;
     }
-    slides[slideIndex-1].style.display = "block";
+    slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 /**
@@ -86,8 +91,8 @@ function showSlidesAuto() {
  * the same way as when running on server
  * @return {void}
 */
-function checkIfLocal(){
-    if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === ""){
+function checkIfLocal() {
+    if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === "") {
         alert("Google Sign in only works from HTTP/S, not local!");//reminder to devs
         //getKeys();
     }
@@ -97,20 +102,21 @@ function checkIfLocal(){
  * This is a function for getting API keys when running locally, it reads in the APIkeys2.txt file
  * @return {string[]}
  */
-function getKeys(){
-    let file = $('<file>').attr('href','file:APIkeys2.txt');
+function getKeys() {
+    let file = $('<file>').attr('href', 'file:APIkeys2.txt');
     let reader = new FileReader();
-    reader.addEventListener('load', function(e){
+    reader.addEventListener('load', function (e) {
         let text = e.target.result;
         alert(text);
     });
     reader.readAsText(file);
 }
+
 /**
  * Checks if the user is on a mobile device and if so enters past the control statement
  * @return {void}
  */
-function testForMobile(){
+function testForMobile() {
     if (/Mobi|Android/i.test(navigator.userAgent)) {
         $('.brand-logo').removeAttr('id'); //centers the logo on mobile devices -- remember to refresh in inspector
         //remove tab images since they do not wrap for mobile devices
@@ -120,8 +126,8 @@ function testForMobile(){
  * About page HTML content
  * @type {template literal}
  */
-var aboutContent = 
-`<h4 class="center-header">Site Developers</h4>
+var aboutContent =
+    `<h4 class="center-header">Site Developers</h4>
 <div class="aboutContainer">
     <div class="card medium" id="Bennett-Card">
         <div class="card-image">
@@ -185,11 +191,46 @@ var aboutContent =
         <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
     </ul>
 </div>`;
+
+/**
+ * Site One (demoQueryV1.JSON).  Pairs with a function to dynamically generate the result-content.
+ * @type {template literal}
+ */
+var searchOneContent =
+    `<h4 class="center-header">Demo search one</h4>
+    <div class="container" id="result-container">
+        <div class="result-parameters">
+        </div>
+        <div class="result-items">
+        </div>
+    </div>
+</div>`;
+
+function displaySearchResults() {
+    //demoQueryV1 variable is the stubbed JSON.  
+    var returnedResult = demoQueryV1
+    $(".result-parameters").html(returnedResult.search_parameters[0]);
+    for (var i = 0; i < returnedResult.organic_results.length; i++) {
+        var itemDiv = $("<div>").addClass("card resultNumber" + i);
+
+        var itemTitle = $("<h5>").addClass("itemTitle" + i).html("Title: " + returnedResult.organic_results[i].title);
+        var itemSnippet = $("<p>").addClass("itemSnippet" + i).html("Snippet: " + returnedResult.organic_results[i].snippet);
+        var itemCachedUrl = $("<p>").addClass("itemCachedUrl" + i).html("CachedURL: " + returnedResult.organic_results[i].cached_page_url);
+        var itemUrl = $("<p>").addClass("itemUrl" + i).html("URL: " + returnedResult.organic_results[i].url);
+        var itemDomain = $("<p>").addClass("itemDomain" + i).html("Domain: " + returnedResult.organic_results[i].domain);
+        var itemDisplayedUrl = $("<p>").addClass("itemDisplayedUrl" + i).html("Displayed URL: " + returnedResult.organic_results[i].displayed_url);
+
+        itemDiv.append(itemTitle, itemSnippet, itemCachedUrl, itemUrl, itemDomain, itemDisplayedUrl);
+
+        $('.result-items').append(itemDiv);
+    }
+}
+
 /**
  * Example modal HTML content
  * @type {template literal}
  */
-var modalz = 
+var modalz =
     `<div id="modal1" class="modal">
         <div class="modal-content">
             <h4>Modal Header</h4>
@@ -204,7 +245,7 @@ var modalz =
  * @type {template literal}
  */
 var createAcountContent =
-`<div id="createAccountModal" class="modal">
+    `<div id="createAccountModal" class="modal">
     <div class="row modal-content">
         <h5 class="center-header">SEO Tracker</h5>
         <div class="col s12">
