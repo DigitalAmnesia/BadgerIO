@@ -68,12 +68,9 @@ main {
 }
 .logIn {
     text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 70px;
     font-size: x-large;
+    color: #00897b;
 }
-
 /* ***CSS for slider*** */
 
 * {box-sizing:border-box}

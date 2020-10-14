@@ -212,11 +212,27 @@ var logInModalContent =
         <div class="col s12">
             <div class="row">
                 <div class="collection logInOptions">
-                    <a href="#!" class="collection-item logIn"><i class="fab fa-google fa-2x" style="color:#DB4437;"></i>&nbspGoogle Sign In</a>
-                    <a href="#!" class="collection-item logIn"><i class="fab fa-facebook-square fa-2x" style="color:#3b5998;"></i>&nbspFacebook Sign In</a>
-                    <a href="#!" class="collection-item logIn"><i class="fab fa-apple fa-2x" style="color:#7D7D7D;"></i>&nbspApple Sign In</a>
-                    <a href="#!" class="collection-item logIn"><i class="fas fa-envelope fa-2x"></i>&nbspEmail Sign In</a>
+                    <a class="collection-item logIn"><i class="fab fa-google" style="color:#DB4437;"></i>&nbspGoogle Sign In</a>
+                    <a class="collection-item logIn"><i class="fab fa-facebook-square" style="color:#3b5998;"></i>&nbspFacebook Sign In</a>
+                    <a class="collection-item logIn"><i class="fab fa-apple" style="color:#7D7D7D;"></i>&nbspApple Sign In</a>
+                    <a class="collection-item logIn"><i class="fas fa-envelope"></i>&nbspEmail Sign In</a>
                 </div>     
+            </div>
+        </div>
+    </div>
+</div>`;
+/**
+ * Log In Modal alternative design format, comment out '1' to use
+ * @type {template literal}
+ */
+var logInModalContent1 =
+`<div id="logInModal" class="modal">
+    <h5 class="center-header">SEO Tracker</h5>
+    <div class="col s12 modal-content">
+        <div class="row">
+            <div class="card-panel logIn">
+            <i class="fab fa-google" style="color:#DB4437;"></i>
+            <a class="logIn">&nbspGoogle Sign In</a>
             </div>
         </div>
     </div>
