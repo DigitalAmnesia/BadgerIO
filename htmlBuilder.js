@@ -15,7 +15,14 @@ $(function(){
     $('.aboutButton').on('click', function(){
         $('.homePageContainer').html(aboutContent);
     });
-   
+    $('#emailSignInButton').on('click', function(){
+        if(!$('#logInEmailDropDown').length){
+        $('#appendToModal').append(logInViaEmail);
+        }
+        else{
+        $('#logInViaEmailContainer').detach();
+        }
+    });
 
     //initialize Materialize content last so that it is rendered
     $('.modal').modal(); //needed in order to initialize Materialize modals
@@ -201,7 +208,7 @@ var modalz =
  */
 var logInModalContent = 
 `<div id="logInModal" class="modal">
-    <div class="row modal-content">
+    <div class="row modal-content" id="appendToModal">
     <h5 class="center-header">SEO Tracker</h5>
         <div class="col s12">
             <div class="row">
@@ -209,40 +216,41 @@ var logInModalContent =
                     <a class="collection-item logIn"><i class="fab fa-google logInIcon" style="color:#DB4437;"></i>&nbspGoogle Sign In</a>
                     <a class="collection-item logIn"><i class="fab fa-facebook-square logInIcon" style="color:#3b5998;"></i>&nbspFacebook Sign In</a>
                     <a class="collection-item logIn"><i class="fab fa-apple logInIcon" style="color:#7D7D7D;"></i>&nbspApple Sign In</a>
-                    <a class="collection-item logIn"><i class="fas fa-envelope logInIcon"></i>&nbspEmail Sign In</a>
+                    <a class="collection-item logIn" id="emailSignInButton"><i class="fas fa-envelope logInIcon"></i>&nbspEmail Sign In</a>
                 </div>     
             </div>
         </div>
-        <center>
-            <div class="container">
-                <div class="z-depth-1 white row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
-                    <form class="col s12">
-                        <div class='row'>
-                            <div class='input-field col s12'>
-                                <input class='validate' type='email' id='email'>
-                                <label for='email' class="changeFormTransitionBehavior">Enter your email</label>
-                            </div>
-                        </div>
-                        <div class='row'>
-                            <div class='input-field col s12'>
-                                <input class='validate' type='password' id='password'>
-                                <label for='password' class="changeFormTransitionBehavior">Enter your password</label>
-                            </div>
-                        </div>
-                        <center>
-                            <div class='row'>
-                            <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect teal darken-1'>Login</button>
-                            </div>
-                            <div class="row">
-                            <label><a class='red-text' href='#!'>Forgot Password?</a></label>
-                            </div>
-                        </center>
-                    </form>
-                </div>
-            </div>
-        </center>
     </div>
 </div>`;
+var logInViaEmail = 
+`<center id="logInViaEmailContainer">
+<div class="container" id="logInEmailDropDown">
+    <div class="z-depth-1 white row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+        <form class="col s12">
+            <div class='row'>
+                <div class='input-field col s12'>
+                    <input class='validate' type='email' id='email'>
+                    <label for='email' class="changeFormTransitionBehavior">Enter your email</label>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='input-field col s12'>
+                    <input class='validate' type='password' id='password'>
+                    <label for='password' class="changeFormTransitionBehavior">Enter your password</label>
+                </div>
+            </div>
+            <center>
+                <div class='row'>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect teal darken-1'>Login</button>
+                </div>
+                <div class="row">
+                <label><a class='red-text' href='#!'>Forgot Password?</a></label>
+                </div>
+            </center>
+        </form>
+    </div>
+</div>
+</center>`;
 /**
  * Log In Modal alternative design format, comment out '1' to use
  * @type {template literal}
