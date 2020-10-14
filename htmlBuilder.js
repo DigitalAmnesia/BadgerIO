@@ -185,9 +185,45 @@ var aboutContent =
         <li class="collection-header"><h4 class="center-header">Core Features</h4></li>
         <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspBadgeriO allows users to gather information about domains, save queries, and generate meaningful reports.<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
         <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspOnce logged in, you gain access to a modular, custom, reporting dashboard.<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAlvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAlvin<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAdd your own API keys to unclock the power of Google x,y,z APIs.<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspYou are going to have to ask Mike about anything else!<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
     </ul>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col m11 coreFeatureL">
+            <h5 class="center-header">Feature 1</h5>
+            <div class="divider"></div>
+            <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
+            raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
+            Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p> 
+            <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonL">Click Me</button>
+        </div>
+        <div class="col m11 coreFeatureR">
+            <h5 class="center-header">Feature 2</h5>
+            <div class="divider"></div>
+            <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
+            raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
+            Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
+            <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonR">Click Me</button>
+        </div>
+        <div class="col m11 coreFeatureL">
+            <h5 class="center-header">Feature 3</h5>
+            <div class="divider"></div>
+            <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
+            raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
+            Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p> 
+            <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonL">Click Me</button>
+        </div>
+        <div class="col m11 coreFeatureR">
+            <h5 class="center-header">Feature 4</h5>
+            <div class="divider"></div>
+            <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
+            raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
+            Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
+            <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonR">Click Me</button>
+        </div>
+    </div>
 </div>`;
 /**
  * Log In modal offering different methods to login
