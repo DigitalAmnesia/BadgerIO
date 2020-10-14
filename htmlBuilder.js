@@ -212,10 +212,10 @@ var logInModalContent =
         <div class="col s12">
             <div class="row">
                 <div class="collection logInOptions">
-                    <a href="#!" class="collection-item logIn">Google Sign In</a>
-                    <a href="#!" class="collection-item logIn">Facebook Sign In</a>
-                    <a href="#!" class="collection-item logIn">Apple Sign In</a>
-                    <a href="#!" class="collection-item logIn">Email Sign In</a>
+                    <a href="#!" class="collection-item logIn"><i class="fab fa-google fa-2x" style="color:#DB4437;"></i>&nbspGoogle Sign In</a>
+                    <a href="#!" class="collection-item logIn"><i class="fab fa-facebook-square fa-2x" style="color:#3b5998;"></i>&nbspFacebook Sign In</a>
+                    <a href="#!" class="collection-item logIn"><i class="fab fa-apple fa-2x" style="color:#7D7D7D;"></i>&nbspApple Sign In</a>
+                    <a href="#!" class="collection-item logIn"><i class="fas fa-envelope fa-2x"></i>&nbspEmail Sign In</a>
                 </div>     
             </div>
         </div>
