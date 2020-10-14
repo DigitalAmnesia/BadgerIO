@@ -61,6 +61,19 @@ body {
 main {
     flex: 1 0 auto;
 }
+.logInOptions {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logIn {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 70px;
+    font-size: large;
+}
+
 /* ***CSS for slider*** */
 
 * {box-sizing:border-box}

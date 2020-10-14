@@ -211,11 +211,11 @@ var logInModalContent =
     <h5 class="center-header">SEO Tracker</h5>
         <div class="col s12">
             <div class="row">
-                <div class="collection">
-                    <a href="#!" class="collection-item">Alvin</a>
-                    <a href="#!" class="collection-item active">Alvin</a>
-                    <a href="#!" class="collection-item">Alvin</a>
-                    <a href="#!" class="collection-item">Alvin</a>
+                <div class="collection logInOptions">
+                    <a href="#!" class="collection-item logIn">Google Sign In</a>
+                    <a href="#!" class="collection-item logIn">Facebook Sign In</a>
+                    <a href="#!" class="collection-item logIn">Apple Sign In</a>
+                    <a href="#!" class="collection-item logIn">Email Sign In</a>
                 </div>     
             </div>
         </div>
