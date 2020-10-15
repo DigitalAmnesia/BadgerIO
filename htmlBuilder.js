@@ -146,7 +146,7 @@ var aboutContent =
             <span class="card-title">Mike Hill</span>
         </div>
         <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+            <p></p>
         </div>
         <div class="card-action">
             <a href="https://github.com/DigitalAmnesia" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
@@ -232,7 +232,7 @@ var aboutContent =
 var logInModalContent = 
 `<div id="logInModal" class="modal">
     <div class="row modal-content" id="appendToModal">
-    <h5 class="center-header">SEO Tracker</h5>
+    <h5 class="center-header">BadgeriO</h5>
         <div class="col s12">
             <div class="row">
                 <div class="collection logInOptions">
@@ -301,7 +301,7 @@ var logInModalContentAlt =
 var createAcountContent =
 `<div id="createAccountModal" class="modal">
     <div class="row modal-content">
-        <h5 class="center-header">SEO Tracker</h5>
+        <h5 class="center-header">BadgeriO</h5>
         <div class="col s12">
             <div class="card-panel">
                 <div class="row">
