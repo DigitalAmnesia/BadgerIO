@@ -211,13 +211,16 @@ function displaySearchResults() {
     var returnedResult = demoQueryV1
     $(".result-parameters").html(returnedResult.search_parameters[0]);
     for (var i = 0; i < returnedResult.organic_results.length; i++) {
-        var itemDiv = $("<div>").addClass("card resultNumber" + i);
+        var itemDiv = $("<div>").addClass("card-stacked card-panel z-depth-1 resultNumber" + i);
 
-        var itemTitle = $("<h5>").addClass("itemTitle" + i).html("Title: " + returnedResult.organic_results[i].title);
+        var itemTitle = $("<h5>").addClass("card-title itemTitle" + i).html("Title: " + returnedResult.organic_results[i].title);
         var itemSnippet = $("<p>").addClass("itemSnippet" + i).html("Snippet: " + returnedResult.organic_results[i].snippet);
-        var itemCachedUrl = $("<p>").addClass("itemCachedUrl" + i).html("CachedURL: " + returnedResult.organic_results[i].cached_page_url);
+        var itemCachedUrl = $("<a>").addClass("card-action itemCachedUrl" + i).html("CachedURL: " + returnedResult.organic_results[i].cached_page_url);
+        itemCachedUrl.attr("href", `${returnedResult.organic_results[i].cached_page_url}`);
         var itemUrl = $("<p>").addClass("itemUrl" + i).html("URL: " + returnedResult.organic_results[i].url);
+        itemUrl.attr("href", `${returnedResult.organic_results[i].url}`);
         var itemDomain = $("<p>").addClass("itemDomain" + i).html("Domain: " + returnedResult.organic_results[i].domain);
+        itemDomain.attr("href", `${returnedResult.organic_results[i].domain}`);
         var itemDisplayedUrl = $("<p>").addClass("itemDisplayedUrl" + i).html("Displayed URL: " + returnedResult.organic_results[i].displayed_url);
 
         itemDiv.append(itemTitle, itemSnippet, itemCachedUrl, itemUrl, itemDomain, itemDisplayedUrl);
