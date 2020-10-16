@@ -24,6 +24,28 @@ $(function(){
     $('#googleSignInButton').on('click', function(){
         googleLogInFirebase();
     });
+    $('#createAccountButton').on('click', function(){
+        checkIfLocal();
+        if($('#createPassword2').hasClass('valid')){
+            createFirebaseEmailAndPasswordUser($('#createAccountEmail').val(),$('#createPassword2').val());
+        }
+    });
+    $('createPassword').on('focusout', function(e){
+        if ($(this).val() !== $("#createPassword2").val()){
+            $("#createPassword2").removeClass("valid").addClass("invalid");
+        }
+        else{
+            $("#createPassword2").removeClass("invalid").addClass("valid");
+        }
+    });
+    $("#createPassword2").on("keyup", function (e){
+        if ($('#createPassword').val() !== $(this).val()){
+            $(this).removeClass("valid").addClass("invalid");
+        } 
+        else{
+            $(this).removeClass("invalid").addClass("valid");
+        }
+    });
 
     //initialize Materialize content last so that it is rendered
     $('.modal').modal(); //needed in order to initialize Materialize modals
@@ -314,19 +336,19 @@ var createAcountContent =
                         </div>
                         <div class="row">
                             <div class="input-field col s10">
-                                <input id="password" type="password" class="validate">
-                                <label for="password" class="changeFormTransitionBehavior">Password</label>
+                                <input id="createPassword" type="password" class="validate">
+                                <label for="createPassword" class="changeFormTransitionBehavior">Password</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s10">
-                                <input id="password2" type="password" class="validate">
-                                <label for="password2" class="changeFormTransitionBehavior">Confirm Password</label>
+                                <input id="createPassword2" type="password" class="validate">
+                                <label for="createPassword2" class="changeFormTransitionBehavior">Confirm Password</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s4 modal-close">
-                                <a href="#" class="btn waves-effect waves-light col"><h6>Create Account</h6></a>
+                                <a href="#" class="btn waves-effect waves-light col" id="createAccountButton"><h6>Create Account</h6></a>
                             </div>
                             <div class="input-field col s3 modal-close">
                                 <a href="#" class="btn waves-effect waves-light col" id="waves-red"><h6>Cancel</h6></a>
