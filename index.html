@@ -17,7 +17,8 @@
   <!-- Font Awesome dependency -->
   <script src="https://kit.fontawesome.com/7fcf630873.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id = "bodyOverride">
+
 <div class = "container" id = "pageContainer">
 <div class = "row">
 <div class = "col l12">
@@ -42,7 +43,7 @@
         <div class="navbar-fixed">
           <nav class="nav-extended teal darken-1">           
             <div class="nav-wrapper">
-              <a href="index.html" class="brand-logo" id="home-page-logo"><img src="images/favicons/BadgeriOIcon.png" style="max-height: 100px; max-width: 100px;" ></a>  
+              <a href="index.html" class="brand-logo" id="home-page-logo"><img src="images/favicons/BadgeriOIcon.png" style="max-height: 100px; max-width: 100px;"></a>  
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a class="aboutButton" href="#">About</a></li>
@@ -52,10 +53,9 @@
             </div>
             <div class="nav-content">
               <ul class="tabs tabs-transparent">
-                <li class="tab"><a href="#"><i class="fas fa-flask"></i> Test 1</a></li>
-                <li class="tab"><a href="#"><i class="fas fa-flask"></i> Test 2</a></li>
-                <li class="tab"><a href="#"><i class="fas fa-flask"></i> Test 3</a></li>
-                <li class="tab"><a id="modalTrigger" href="#"><i class="fas fa-file-contract"></i> Fire Modal</a></li>
+                <li class="tab"><a href="#"><i class="fas fa-search"></i>&nbspQueries</a></li>
+                <li class="tab"><a href="#"><i class="fas fa-chart-pie"></i>&nbspDashboards</a></li>
+                <li class="tab"><a href="#"><i class="far fa-chart-bar"></i>&nbspReports</a></li>
               </ul>
             </div>
           </nav>
@@ -72,8 +72,6 @@
   <div class="createAnAccount"></div>
   <!-- Log In Modal -->
   <div class="logInModal"></div>
-  <!-- Fire Modal example dynamically filled from htmlBuilder.js -->
-  <div class="modalContent"></div>
   <!-- Main Page Template - everything else get added inside of the homePageContainer -->
   <div class = "homePageContainer">
     <div class="row">
@@ -173,15 +171,10 @@
   <!-- Materialize - Compressed JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <!-- Stub AJAX call.  Note that we cannot make AJAX calls to local file paths as this would be a security flaw.  Chrome doesn't allow it.-->
-  <!-- <script type="text/javascript" src="demoQueryV1.json">
-    // $.ajax({
-    //   type: 'GET',
-    //   dataType: 'json',
-    //   url: '/DemoQueryV1.JSON',
-    // }).then(function displayTheThings() { });
-  </script> -->
+  <!-- Graphing API - Apex Charts -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
   <script src="htmlBuilder.js"></script>
-  <script src=serpStack.js></script>
+  <script src="serpStack.js"></script>
 </body>
 </html>

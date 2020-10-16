@@ -24,6 +24,28 @@ $(function(){
     $('#googleSignInButton').on('click', function(){
         googleLogInFirebase();
     });
+    $('#createAccountButton').on('click', function(){
+        checkIfLocal();
+        if($('#createPassword2').hasClass('valid')){
+            createFirebaseEmailAndPasswordUser($('#createAccountEmail').val(),$('#createPassword2').val());
+        }
+    });
+    $('createPassword').on('focusout', function(e){
+        if ($(this).val() !== $("#createPassword2").val()){
+            $("#createPassword2").removeClass("valid").addClass("invalid");
+        }
+        else{
+            $("#createPassword2").removeClass("invalid").addClass("valid");
+        }
+    });
+    $("#createPassword2").on("keyup", function (e){
+        if ($('#createPassword').val() !== $(this).val()){
+            $(this).removeClass("valid").addClass("invalid");
+        } 
+        else{
+            $(this).removeClass("invalid").addClass("valid");
+        }
+    });
 
     //initialize Materialize content last so that it is rendered
     $('.modal').modal(); //needed in order to initialize Materialize modals
@@ -126,7 +148,6 @@ function testForMobile(){
  */
 var aboutContent = 
 `<h4 class="center-header">Site Developers</h4>
-
 <div class = "container" id="aboutContainer">
     <div class = "row">
         <div class = "col l3">
@@ -151,7 +172,7 @@ var aboutContent =
                     <span class="card-title">Mike Hill</span>
                 </div>
                 <div class="card-content">
-                    <p>Certified Cyber Intelligence Investigator with more than a decade of experience protecting intellectual property and eliminating the sale of counterfeit products on the internet. Known as a divergent thinker who is passionate about improving efficiency, I aim to leverage my recently acquired certification from the University of North Carolina at Chapel Hill in fullstack flex development to provide the agencies responsible for enforcing copyright and intellectual property laws with simple and intuitive solutions for investigating and reporting intellectual property related crimes.</p>
+                    <p>Cyber Intelligence Investigator with more than a decade of experience in online-based investigations. I aim to leverage my certification from the UNC Chapel Hill in fullstack flex development to create intuitive solutions for the investigative community.</p>
                 </div>
                 <div class="card-action">
                     <p><a href="https://github.com/DigitalAmnesia" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a><p>
@@ -194,10 +215,10 @@ var aboutContent =
 <div class="featureList">
     <ul class="collection with-header">
         <li class="collection-header"><h4 class="center-header">Core Features</h4></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspBadgeriO allows users to gather information about domains, save queries, and generate meaningful reports.<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspOnce logged in, you gain access to a modular, custom, reporting dashboard.<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAdd your own API keys to unclock the power of Google x,y,z APIs.<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspYou are going to have to ask Mike about anything else!<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspBadgeriO allows users to gather information about domains, save queries, and generate meaningful reports.<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspOnce logged in, you gain access to a modular, custom, reporting dashboard.<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAdd your own API keys to unclock the power of Google x,y,z APIs.<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspYou are going to have to ask Mike about anything else!<a href="#!" class="secondary-content">Details</a></div></li>
     </ul>
 </div>
 <div class="container">
@@ -242,13 +263,8 @@ var aboutContent =
  */
 var logInModalContent = 
 `<div id="logInModal" class="modal">
-<<<<<<< HEAD
-    <div class="row modal-content">
-    <h5 class="center-header"><img src="images/favicons/BadgeriOIcon.png" style="max-height: 100px; max-width: 100px;" ></h5>
-=======
     <div class="row modal-content" id="appendToModal">
-    <h5 class="center-header">BadgeriO</h5>
->>>>>>> 611a207bcb5a2e32b02ed72a004d44c936d4c74a
+    <h5 class="center-header"><img src="images/favicons/BadgeriOIcon.png" style="max-height: 100px; max-width: 100px;"></h5>
         <div class="col s12">
             <div class="row">
                 <div class="collection logInOptions">
@@ -317,7 +333,7 @@ var logInModalContentAlt =
 var createAcountContent =
 `<div id="createAccountModal" class="modal">
     <div class="row modal-content">
-        <h5 class="center-header">BadgeriO</h5>
+        <h5 class="center-header"><img src="images/favicons/BadgeriOIcon.png" style="max-height: 100px; max-width: 100px;"></h5>
         <div class="col s12">
             <div class="card-panel">
                 <div class="row">
@@ -335,19 +351,14 @@ var createAcountContent =
                             </div>
                         </div>
                         <div class="row">
-<<<<<<< HEAD
-                            <div class="input-field col s10" id = "confirmPass" >
-                                <i class="mdi-action-lock-outline prefix"></i>
-=======
                             <div class="input-field col s10">
->>>>>>> 611a207bcb5a2e32b02ed72a004d44c936d4c74a
-                                <input id="password2" type="password" class="validate">
-                                <label for="password2" class="changeFormTransitionBehavior">Confirm Password</label>
+                                <input id="createPassword2" type="password" class="validate">
+                                <label for="createPassword2" class="changeFormTransitionBehavior">Confirm Password</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s4 modal-close">
-                                <a href="#" class="btn waves-effect waves-light col"><h6>Create Account</h6></a>
+                                <a href="#" class="btn waves-effect waves-light col" id="createAccountButton"><h6>Create Account</h6></a>
                             </div>
                             <div class="input-field col s3 modal-close" id = "cancel" >
                                 <a href="#" class="btn waves-effect waves-light col" id="waves-red"><h6>Cancel</h6></a>
