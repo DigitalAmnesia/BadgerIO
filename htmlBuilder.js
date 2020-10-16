@@ -1,17 +1,9 @@
-// $(document).ready(function(){
-//     $('#modal1').modal();
-//     $('#modal1').modal('open');              
-//    });
-
-
 //paint slideshow
 var slideIndex = 1;
 showSlides(slideIndex);
 // Here is where we can use jQuery to dynamically insert addiontal HTML pages into the primary page
 $(function(){
     testForMobile();
-    $('.modalContent').html(modalz);
-    $('#modalTrigger').attr('href','#modal1').addClass('modal-trigger');
     $('.createAnAccount').html(createAcountContent);
     $('#createAccountTrig').attr('href','#createAccountModal').addClass('modal-trigger');
     $('.logInModal').html(logInModalContent);
@@ -20,6 +12,17 @@ $(function(){
     // *** On Click Functions ***
     $('.aboutButton').on('click', function(){
         $('.homePageContainer').html(aboutContent);
+    });
+    $('#emailSignInButton').on('click', function(){
+        if(!$('#logInEmailDropDown').length){
+        $('#appendToModal').append(logInViaEmail);
+        }
+        else{
+        $('#logInViaEmailContainer').detach();
+        }
+    });
+    $('#googleSignInButton').on('click', function(){
+        googleLogInFirebase();
     });
 
     //initialize Materialize content last so that it is rendered
@@ -191,42 +194,118 @@ var aboutContent =
 <div class="featureList">
     <ul class="collection with-header">
         <li class="collection-header"><h4 class="center-header">Core Features</h4></li>
-        <li class="collection-item"><div>Organic Search Indexing<a href="#!" class="secondary-content">Details</a></div></li>
-        <li class="collection-item"><div>Backlink Indexing<a href="#!" class="secondary-content">Details</a></div></li>
-        <li class="collection-item"><div>Common File Search<a href="#!" class="secondary-content">Details</a></div></li>
-        <li class="collection-item"><div>Email Discovery<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspBadgeriO allows users to gather information about domains, save queries, and generate meaningful reports.<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspOnce logged in, you gain access to a modular, custom, reporting dashboard.<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAdd your own API keys to unclock the power of Google x,y,z APIs.<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspYou are going to have to ask Mike about anything else!<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
     </ul>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col m11 coreFeatureL">
+            <h5 class="center-header">Feature 1</h5>
+            <div class="divider"></div>
+            <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
+            raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
+            Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p> 
+            <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonL">Click Me</button>
+        </div>
+        <div class="col m11 coreFeatureR">
+            <h5 class="center-header">Feature 2</h5>
+            <div class="divider"></div>
+            <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
+            raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
+            Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
+            <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonR">Click Me</button>
+        </div>
+        <div class="col m11 coreFeatureL">
+            <h5 class="center-header">Feature 3</h5>
+            <div class="divider"></div>
+            <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
+            raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
+            Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p> 
+            <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonL">Click Me</button>
+        </div>
+        <div class="col m11 coreFeatureR">
+            <h5 class="center-header">Feature 4</h5>
+            <div class="divider"></div>
+            <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
+            raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
+            Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
+            <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonR">Click Me</button>
+        </div>
+    </div>
 </div>`;
-/**
- * Example modal HTML content
- * @type {template literal}
- */
-var modalz = 
-    `<div id="modal1" class="modal">
-        <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
-        </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-        </div>
-    </div>`;
 /**
  * Log In modal offering different methods to login
  * @type {template literal}
  */
 var logInModalContent = 
 `<div id="logInModal" class="modal">
+<<<<<<< HEAD
     <div class="row modal-content">
     <h5 class="center-header"><img src="images/favicons/BadgeriOIcon.png" style="max-height: 100px; max-width: 100px;" ></h5>
+=======
+    <div class="row modal-content" id="appendToModal">
+    <h5 class="center-header">BadgeriO</h5>
+>>>>>>> 611a207bcb5a2e32b02ed72a004d44c936d4c74a
         <div class="col s12">
             <div class="row">
                 <div class="collection logInOptions">
-                    <a href="#!" class="collection-item logIn">Google Sign In</a>
-                    <a href="#!" class="collection-item logIn">Facebook Sign In</a>
-                    <a href="#!" class="collection-item logIn">Apple Sign In</a>
-                    <a href="#!" class="collection-item logIn">Email Sign In</a>
+                    <a class="collection-item logIn" id="googleSignInButton"><i class="fab fa-google logInIcon" style="color:#DB4437;"></i>&nbspGoogle Sign In</a>
+                    <a class="collection-item logIn"><i class="fab fa-facebook-square logInIcon" style="color:#3b5998;"></i>&nbspFacebook Sign In</a>
+                    <a class="collection-item logIn"><i class="fab fa-apple logInIcon" style="color:#7D7D7D;"></i>&nbspApple Sign In</a>
+                    <a class="collection-item logIn" id="emailSignInButton"><i class="fas fa-envelope logInIcon"></i>&nbspEmail Sign In</a>
                 </div>     
+            </div>
+        </div>
+    </div>
+</div>`;
+/**
+ * Option to login with email and password, dynamically added to modal after click event
+ * @type {template literal}
+ */
+var logInViaEmail = 
+`<center id="logInViaEmailContainer">
+<div class="container" id="logInEmailDropDown">
+    <div class="z-depth-1 white row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+        <form class="col s12">
+            <div class='row'>
+                <div class='input-field col s12'>
+                    <input class='validate' type='email' id='email'>
+                    <label for='email' class="changeFormTransitionBehavior">Enter your email</label>
+                </div>
+            </div>
+            <div class='row'>
+                <div class='input-field col s12'>
+                    <input class='validate' type='password' id='password'>
+                    <label for='password' class="changeFormTransitionBehavior">Enter your password</label>
+                </div>
+            </div>
+            <center>
+                <div class='row'>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect teal darken-1'>Login</button>
+                </div>
+                <div class="row">
+                <label><a class='red-text' href='#!'>Forgot Password?</a></label>
+                </div>
+            </center>
+        </form>
+    </div>
+</div>
+</center>`;
+/**
+ * Log In Modal alternative design format, comment out '1' to use
+ * @type {template literal}
+ */
+var logInModalContentAlt =
+`<div id="logInModal" class="modal">
+    <h5 class="center-header">SEO Tracker</h5>
+    <div class="col s12 modal-content">
+        <div class="row">
+            <div class="card-panel logIn">
+            <i class="fab fa-google" style="color:#DB4437;"></i>
+            <a class="logIn">&nbspGoogle Sign In</a>
             </div>
         </div>
     </div>
@@ -238,30 +317,32 @@ var logInModalContent =
 var createAcountContent =
 `<div id="createAccountModal" class="modal">
     <div class="row modal-content">
-        <h5 class="center-header">SEO Tracker</h5>
+        <h5 class="center-header">BadgeriO</h5>
         <div class="col s12">
             <div class="card-panel">
                 <div class="row">
                     <form class="col s12 m12 l12">
                         <div class="row">
                             <div class="input-field col s10">
-                                <i class="mdi-communication-email prefix"></i>
-                                <input id="email" type="email" class="validate">
-                                <label for="email">Your email</label>
+                                <input id="creatAccountEmail" type="email" class="validate">
+                                <label for="createAccountEmail" class="changeFormTransitionBehavior">Your email</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s10">
-                                <i class="mdi-action-lock-outline prefix"></i>
                                 <input id="password" type="password" class="validate">
-                                <label for="password">Password</label>
+                                <label for="password" class="changeFormTransitionBehavior">Password</label>
                             </div>
                         </div>
                         <div class="row">
+<<<<<<< HEAD
                             <div class="input-field col s10" id = "confirmPass" >
                                 <i class="mdi-action-lock-outline prefix"></i>
+=======
+                            <div class="input-field col s10">
+>>>>>>> 611a207bcb5a2e32b02ed72a004d44c936d4c74a
                                 <input id="password2" type="password" class="validate">
-                                <label for="password">Confirm Password</label>
+                                <label for="password2" class="changeFormTransitionBehavior">Confirm Password</label>
                             </div>
                         </div>
                         <div class="row">
