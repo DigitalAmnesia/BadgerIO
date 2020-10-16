@@ -25,7 +25,10 @@ $(function(){
         googleLogInFirebase();
     });
     $('#createAccountButton').on('click', function(){
-        //check if passwords match, if so, call firebase function to create user
+        checkIfLocal();
+        if($('#createPassword2').hasClass('valid')){
+            createFirebaseEmailAndPasswordUser($('#createAccountEmail').val(),$('#createPassword2').val());
+        }
     });
     $('createPassword').on('focusout', function(e){
         if ($(this).val() !== $("#createPassword2").val()){
