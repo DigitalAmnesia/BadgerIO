@@ -330,7 +330,7 @@ var createAcountContent =
                     <form class="col s12 m12 l12">
                         <div class="row">
                             <div class="input-field col s10">
-                                <input id="creatAccountEmail" type="email" class="validate">
+                                <input id="createAccountEmail" type="email" class="validate">
                                 <label for="createAccountEmail" class="changeFormTransitionBehavior">Your email</label>
                             </div>
                         </div>
