@@ -133,11 +133,11 @@ var aboutContent =
                     <span class="card-title">Bennett Gould</span>
                 </div>
                 <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    <p>I have interests in computer programming, Microsoft server management, high performance computing, networking, GPU programming (CUDA, pyCUDA), IoT, cybersecurity, and IaaS/SaaS solutions.</p>
                 </div>
                 <div class="card-action">
-                    <a href="https://github.com/bpgould" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
-                    <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
+                    <p><a href="https://github.com/bpgould" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a><p>
+                    <p><a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a><p>
                 </div>
             </div>
         </div>
@@ -148,11 +148,11 @@ var aboutContent =
                     <span class="card-title">Mike Hill</span>
                 </div>
                 <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    <p>Certified Cyber Intelligence Investigator with more than a decade of experience protecting intellectual property and eliminating the sale of counterfeit products on the internet. Known as a divergent thinker who is passionate about improving efficiency, I aim to leverage my recently acquired certification from the University of North Carolina at Chapel Hill in fullstack flex development to provide the agencies responsible for enforcing copyright and intellectual property laws with simple and intuitive solutions for investigating and reporting intellectual property related crimes.</p>
                 </div>
                 <div class="card-action">
-                    <a href="https://github.com/DigitalAmnesia" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
-                    <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
+                    <p><a href="https://github.com/DigitalAmnesia" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a><p>
+                    <p><a href="https://www.linkedin.com/in/michaelxhill/"><i class="fas fa-user"></i>&nbspPersonal Website</a><p>
                 </div>
             </div>
         </div>
@@ -166,8 +166,8 @@ var aboutContent =
                     <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
-                    <a href="https://github.com/habby-bit" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
-                    <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
+                    <p><a href="https://github.com/habby-bit" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a><p>
+                    <p><a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a><p>
                 </div>
             </div>
         </div>
@@ -181,8 +181,8 @@ var aboutContent =
                     <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
-                    <a href="https://github.com/emelanson" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
-                    <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
+                    <p><a href="https://github.com/emelanson" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a><p>
+                    <p><a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a><p>
                 </div>
             </div>
         </div>
@@ -191,10 +191,10 @@ var aboutContent =
 <div class="featureList">
     <ul class="collection with-header">
         <li class="collection-header"><h4 class="center-header">Core Features</h4></li>
-        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content">Details</a></div></li>
-        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content">Details</a></div></li>
-        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content">Details</a></div></li>
-        <li class="collection-item"><div>Alvin<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div>Organic Search Indexing<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div>Backlink Indexing<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div>Common File Search<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div>Email Discovery<a href="#!" class="secondary-content">Details</a></div></li>
     </ul>
 </div>`;
 /**
@@ -218,7 +218,7 @@ var modalz =
 var logInModalContent = 
 `<div id="logInModal" class="modal">
     <div class="row modal-content">
-    <h5 class="center-header">SEO Tracker</h5>
+    <h5 class="center-header"><img src="images/favicons/BadgeriOIcon.png" style="max-height: 100px; max-width: 100px;" ></h5>
         <div class="col s12">
             <div class="row">
                 <div class="collection logInOptions">
@@ -258,7 +258,7 @@ var createAcountContent =
                             </div>
                         </div>
                         <div class="row">
-                            <div class="input-field col s10">
+                            <div class="input-field col s10" id = "confirmPass" >
                                 <i class="mdi-action-lock-outline prefix"></i>
                                 <input id="password2" type="password" class="validate">
                                 <label for="password">Confirm Password</label>
@@ -268,7 +268,7 @@ var createAcountContent =
                             <div class="input-field col s4 modal-close">
                                 <a href="#" class="btn waves-effect waves-light col"><h6>Create Account</h6></a>
                             </div>
-                            <div class="input-field col s3 modal-close">
+                            <div class="input-field col s3 modal-close" id = "cancel" >
                                 <a href="#" class="btn waves-effect waves-light col" id="waves-red"><h6>Cancel</h6></a>
                             </div>
                         </div>
