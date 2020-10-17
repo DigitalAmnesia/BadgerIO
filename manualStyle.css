@@ -42,8 +42,7 @@ nav {
     margin-left: 3%;
 } 
 .homePageContainer {
-  padding-top: 60px; /* height of sticky header */
-  padding-left: 30px;
+  padding-top: 30px; /* height of sticky header */
 }
 
 .tabs {
