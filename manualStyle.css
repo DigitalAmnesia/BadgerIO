@@ -165,13 +165,18 @@ main {
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
-  border: 1px solid black;
+  border: 2px solid black;
   position: relative;
   margin: auto;
 }
 /* Hide the images by default */
 .mySlides {
   display: none;
+}
+.centerSlideImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* Next & previous buttons */
 .prev, .next {
