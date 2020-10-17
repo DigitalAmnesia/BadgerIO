@@ -171,11 +171,11 @@ var aboutContent =
         <div class = "col l3 responsiveProfile">
             <div class="card large" id="Mike-Card">
                 <div class="card-image">
-                    <img src="images/sample-1.jpeg">
+                    <img src="images/Mike.jpg">
                     <span class="card-title">Mike Hill</span>
                 </div>
                 <div class="card-content">
-                    <p>Cyber Intelligence Investigator with more than a decade of experience in online-based investigations. I aim to leverage my certification from the UNC Chapel Hill in fullstack flex development to create intuitive solutions for the investigative community.</p>
+                    <p>Cyber Intelligence Investigator with a decade of experience in online-based investigations. I aim to leverage my experience and knowledge to develop intuitive solutions for the investigative community.</p>
                 </div>
                 <div class="card-action">
                     <p><a href="https://github.com/DigitalAmnesia" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a><p>
@@ -220,42 +220,34 @@ var aboutContent =
         <li class="collection-header"><h4 class="center-header">Core Features</h4></li>
         <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspBadgeriO allows users to gather information about domains, save queries, and generate meaningful reports.<a href="#!" class="secondary-content">Details</a></div></li>
         <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspOnce logged in, you gain access to a modular, custom, reporting dashboard.<a href="#!" class="secondary-content">Details</a></div></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAdd your own API keys to unclock the power of Google x,y,z APIs.<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAdd your own API keys to unclock the power of Varoius Search APIs.<a href="#!" class="secondary-content">Details</a></div></li>
         <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspYou are going to have to ask Mike about anything else!<a href="#!" class="secondary-content">Details</a></div></li>
     </ul>
 </div>
 <div class="container">
     <div class="row">
         <div class="col m11 coreFeatureL">
-            <h5 class="center-header">Feature 1</h5>
+            <h5 class="center-header">Organic Search Indexing</h5>
             <div class="divider"></div>
-            <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
-            raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
-            Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p> 
+            <p>BadgeriO uses advanced queries to dig through the organic search results of popular search engines, to build a clearer picture of the sites’ content quality, structure, and organic reach. </p> 
             <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonL">Click Me</button>
         </div>
         <div class="col m11 coreFeatureR">
-            <h5 class="center-header">Feature 2</h5>
+            <h5 class="center-header">Backlink Indexing</h5>
             <div class="divider"></div>
-            <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
-            raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
-            Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
+            <p>Digging deep into organic search, BadgeriO scours the internet for websites that backlink to your target site.  Giving you valuable insights into potential affiliates, business partners, or internet communities the site is associated with.</p>
             <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonR">Click Me</button>
         </div>
         <div class="col m11 coreFeatureL">
-            <h5 class="center-header">Feature 3</h5>
+            <h5 class="center-header">Common File Search</h5>
             <div class="divider"></div>
-            <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
-            raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
-            Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p> 
+            <p>This feature attempts to root through organic search results to find common file types like PDFS, PPTS, DOC, XLS, and SWF.  These documents can be treasure-troves for inside contacts, email addresses, corporate structure, company mission statements, product catalogs, and company policies.</p> 
             <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonL">Click Me</button>
         </div>
         <div class="col m11 coreFeatureR">
-            <h5 class="center-header">Feature 4</h5>
+            <h5 class="center-header">Email Discovery</h5>
             <div class="divider"></div>
-            <p>Sriracha biodiesel taxidermy organic post-ironic, Intelligentsia salvia mustache 90's code editing brunch. Butcher polaroid VHS art party, hashtag Brooklyn deep v PBR narwhal sustainable mixtape swag wolf squid tote bag. Tote bag cronut semiotics,
-            raw denim deep v taxidermy messenger bag. Tofu YOLO Etsy, direct trade ethical Odd Future jean shorts paleo. Forage Shoreditch tousled aesthetic irony, street art organic Bushwick artisan cliche semiotics ugh synth chillwave meditation.
-            Shabby chic lomo plaid vinyl chambray Vice. Vice sustainable cardigan, Williamsburg master cleanse hella DIY 90's blog.</p>
+            <p>Sit back and let BadgeriO attempt to dig up email addresses belonging to your target site.  Discovered email addresses will be returned with sources and their last observed date!</p>
             <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonR">Click Me</button>
         </div>
     </div>
