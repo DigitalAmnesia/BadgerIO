@@ -26,14 +26,23 @@
     margin-top: 5vw !important;
     /* color:red !important; */
 }
+
+.mobile-demo {
+  z-index: 1000;
+}
 /* have the log in option stand out for returning customers desktop and mobile */
 .log-in-black {
     color: black !important;
 }
 
-#navContainer {
+#navContainer{
   min-width: 100% !important;
   padding: 0px;
+
+}
+
+.nav-extended, .nav-wrapper {
+  z-index: 1;
 }
 
 nav {
@@ -45,6 +54,9 @@ nav {
     margin-left: 3%;
 } 
 
+.sidenav-overlay {
+  z-index: 100;
+}
 
 .aboutButton, 
 #createAccountTrig, 
@@ -60,9 +72,6 @@ nav {
   margin-left: 1%;
 }
 
-#scrollBar {
-  margin-left: 20px;
-}
 /* used to maximize modal area to make forms look better */
 .modal {
     width: 60% !important; 
@@ -164,9 +173,6 @@ main {
   width: 90%;
   font-size: x-large;
   color: black !important;
-}
-.logInIcon {
-    float: left;
 }
 
 /* ***CSS for slider*** */

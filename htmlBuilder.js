@@ -10,6 +10,15 @@ $(function(){
     $('#signInFirebase').attr('href','#logInModal').addClass('modal-trigger');
   
     // *** On Click Functions ***
+    $("#aboutBtn").on('click', function(){
+        $('.homePageContainer').html(aboutContent);
+    });
+    $("#accountBtn").on('click', function(){
+        $('.homePageContainer').html(createAcountContent);
+    });
+    $("#logInBtn").on('click', function(){
+        $('.homePageContainer').html(logInViaEmail);
+    });
     $('.aboutButton').on('click', function(){
         $('.homePageContainer').html(aboutContent);
     });
@@ -252,10 +261,6 @@ var aboutContent =
         </div>
     </div>
 </div>`;
-
-
-
-
 
 /**
  * Log In modal offering different methods to login

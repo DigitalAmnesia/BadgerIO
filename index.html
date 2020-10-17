@@ -40,9 +40,9 @@
             </div>
           </nav>
           <ul class="sidenav teal accent-3" id="mobile-demo">
-              <li><a class="largerMobile btn" href="#">About</a></li>
-              <li><a class="largerMobile btn" href="#">Create Account</a></li>
-              <li><a class="largerMobile btn log-in-black" href="#">Log In</a></li>
+              <li><a class="largerMobile btn" id="aboutBtn" href="#">About</a></li>
+              <li><a class="largerMobile btn" id="accountBtn" href="#">Create Account</a></li>
+              <li><a class="largerMobile btn log-in-black" id="logInBtn" href="#">Log In</a></li>
           </ul>
         </div>
     </div>
@@ -58,13 +58,13 @@
         <div class="card-panel white" id="pageTemplateContainer">
           <div class = "row">
             <div class = "col l12">
-              <div class = "col l10">
+              <div class = "col l11">
                 <div id="slideShowAndDots"> 
                   <div class="slideshow-container">
                     <!-- Full-width images with number and caption text -->
                     <div class="mySlides fade">
                         <div class="numbertext">1 / 3</div>
-                        <img src="images/BadgerLanding.jpg" style="width:945px; height: 630;" class="centerSlideImage">
+                        <img src="images/BadgerLanding.jpg" style="width:100%" class="centerSlideImage">
                         <div class="text">Caption Text</div>
                     </div>
                     <div class="mySlides fade">
@@ -90,7 +90,7 @@
                   </div>
                 </div> 
               </div>
-              <div class="col l2 hide-on-medium-only">
+              <div class="col l1 hide-on-med-and-down">
                 <ul class="section table-of-contents fixed" id = "scrollBar">
                   <li><a href="#slideShowAndDots">Slides</a></li>
                   <li><a href="#slideShowAndDots">Section2</a></li>
