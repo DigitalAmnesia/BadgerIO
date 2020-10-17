@@ -1,14 +1,23 @@
+/* Page sizing */
 #pageContainer{
   width: 100%;
   padding: 0px;
   margin: 0px;
 }
-
-.card-action {
-  line-height: 1.5;
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
-.card-image {
-  max-height: 50% !important;
+main {
+  flex: 1 0 auto;
+}
+
+/* set constant border around page */
+#pageTemplateContainer {
+  border:4px solid #9e9e9e; 
+  margin-bottom: .5rem !important;
+  max-width: 97.5vw;
 }
 
 /* Keeps the picture from looking really dumb on iPad/Tablets */
@@ -20,56 +29,66 @@
 .changeFormTransitionBehavior {
     background-color: white !important;
 }
-/* I am not sure why this cannot be applied to the whole ul */
+/* I am not sure why this cannot be applied to the whole ul. Mobile nav css */
 .largerMobile{
     font-size: 4.5vw !important;
     margin-top: 5vw !important;
     /* color:red !important; */
 }
-
 .mobile-demo {
   z-index: 1000;
 }
+
 /* have the log in option stand out for returning customers desktop and mobile */
 .log-in-black {
     color: black !important;
 }
 
+/* Navbar content styling */
 #navContainer{
   min-width: 100% !important;
   padding: 0px;
 
 }
-
 .nav-extended, .nav-wrapper {
   z-index: 1;
 }
-
 nav {
   padding-right: 50px;
   padding-left: 0px;
 }
-
 #home-page-logo {
     margin-left: 3%;
 } 
-
 .sidenav-overlay {
   z-index: 100;
 }
-
 .aboutButton, 
 #createAccountTrig, 
 #signInFirebase {
   font-size: 20px;
 }
-
-.homePageContainer {
-  padding-top: 30px; /* height of sticky header */
-}
-
 .tabs {
   margin-left: 1%;
+}
+
+/* Sticky footer */
+.footer-li {
+  float: left;
+  margin-bottom: 0px;
+  margin-top: 4px;
+  font-size: 20px;
+}
+#footerContainer {
+margin-bottom: 30px;
+width: 90%;
+font-size: x-large;
+color: black !important;
+}
+
+/* height of sticky header */
+.homePageContainer, #aboutContainer {
+  padding-top: 30px; 
 }
 
 /* used to maximize modal area to make forms look better */
@@ -77,7 +96,6 @@ nav {
     width: 60% !important; 
     max-height: 90% !important;
 }
-
 .modal1 {
   z-index: 1;
   background-color: aqua;
@@ -87,69 +105,65 @@ nav {
 
 }
 
+/* Styling for about page */
 #aboutContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 90%;
-    padding-top: 30px; /* height of sticky header */
 }
 .center-header {
-    text-align: center;
+  text-align: center;
+}
+/* Bio Cards */
+.card-action {
+  line-height: 1.5;
+}
+.card-image {
+  max-height: 50% !important;
+}
+/* Features list */
+.coreFeatureL {
+  border: 2px solid #9e9e9e;
+  margin:2px;
+  float:left !important;
+  margin-top: 4%;
+  margin-bottom: 1%;
+}
+.coreFeatureR {
+  border: 2px solid #9e9e9e;
+  margin:2px;
+  float:right !important;
+  margin-top: 4%;
+  margin-bottom: 1%;
+
+}
+.featureButtonL {
+  margin: 5px;
+  float: left;
+}
+.featureButtonR {
+  margin: 5px;
+  float: right;
 }
 .featureList {
-    width: 90%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+width: 90%;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
+
+/* log-in modal */
 .row .col .input-field{
     margin-bottom: 5px;
 }
+
+/* create account cancel button */
 #waves-red {
     background-color: rgba(207, 0, 15, .8);
 }
-/* set constant border around page */
-#pageTemplateContainer {
-    border:4px solid #9e9e9e; 
-    margin-bottom: .5rem !important;
-    max-width: 97.5vw;
-}
-.coreFeatureL {
-    border: 2px solid #9e9e9e;
-    margin:2px;
-    float:left !important;
-    margin-bottom: 5%;
-}
-.coreFeatureR {
-    border: 2px solid #9e9e9e;
-    margin:2px;
-    float:right !important;
-    margin-bottom: 5%;
-}
-.featureButtonL {
-    margin: 5px;
-    float: left;
-}
-.featureButtonR {
-    margin: 5px;
-    float: right;
-}
-.footer-li {
-    float: left;
-    margin-bottom: 0px;
-}
-/* for sticky footer */
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-/* for sticky footer */
-main {
-    flex: 1 0 auto;
-}
 
+/* Log in content */
 .logInOptions {
   width: 60%;
   margin-left: auto;
@@ -163,16 +177,8 @@ main {
 .logInIcon {
   float: left;
 }
-
 .collection a.collection-item {
       margin: 0px;
-}
-
-#footerContainer {
-  margin-bottom: 30px;
-  width: 90%;
-  font-size: x-large;
-  color: black !important;
 }
 
 /* ***CSS for slider*** */
