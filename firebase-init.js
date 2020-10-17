@@ -31,6 +31,15 @@ function googleLogInFirebase(){
         var credential = error.credential;// The firebase.auth.AuthCredential type that was used.
     });
 }
+function signInFirebaseEmailAndPassword(email, password){
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .catch(function(error){
+            var errorCode = error.code;
+            console.log(errorCode);
+            var errorMessage = error.message;
+            console.log(errorMessage);
+        });
+}
 function createFirebaseEmailAndPasswordUser(email, password){
     firebase.auth().createUserWithEmailAndPassword(email, password)
         .catch(function(error){
