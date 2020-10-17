@@ -27,7 +27,10 @@ $(function(){
     $('#createAccountButton').on('click', function(){
         checkIfLocal();
         if($('#createPassword2').hasClass('valid')){
-            createFirebaseEmailAndPasswordUser($('#createAccountEmail').val(),$('#createPassword2').val());
+            console.log($('#createAccountEmail').val());
+            let email = $('#createAccountEmail').val();
+            let password = $('#createPassword2').val();
+            createFirebaseEmailAndPasswordUser(email, password);
         }
     });
     $('createPassword').on('focusout', function(e){
