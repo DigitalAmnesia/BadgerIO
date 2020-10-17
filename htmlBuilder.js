@@ -10,9 +10,31 @@ $(function(){
     $('#signInFirebase').attr('href','#logInModal').addClass('modal-trigger');
   
     // *** On Click Functions ***
+    $("#aboutBtn").on('click', function(){
+        $('.homePageContainer').html(aboutContent);
+    });
+
+    $("#accountBtn").on('click', function(){
+        $('.homePageContainer').html(createAcountContent);
+    });
+
+    $("#logInBtn").on('click', function(){
+        $('.homePageContainer').html(logInMobile);
+    });
+
+    $(document).on('click', '#emailSignInButtonMobile', function(){
+        if(!$('#logInEmailDropDownMobile').length){
+        $('#appendToMobile').append(logInViaEmailMobile);
+        }
+        else{
+        $('#logInViaEmailContainerMobile').detach();
+        }
+    });
+
     $('.aboutButton').on('click', function(){
         $('.homePageContainer').html(aboutContent);
     });
+
     $('#emailSignInButton').on('click', function(){
         if(!$('#logInEmailDropDown').length){
         $('#appendToModal').append(logInViaEmail);
@@ -21,9 +43,11 @@ $(function(){
         $('#logInViaEmailContainer').detach();
         }
     });
+
     $('#googleSignInButton').on('click', function(){
         googleLogInFirebase();
     });
+
     $('#createAccountButton').on('click', function(){
         checkIfLocal();
         if($('#createPassword2').hasClass('valid')){
@@ -199,11 +223,11 @@ var aboutContent =
         <div class = "col l3 responsiveProfile">
             <div class="card large" id="Habby-Card">
                 <div class="card-image">
-                    <img src="images/sample-1.jpeg">
+                    <img src="images/Habby.jpg">
                     <span class="card-title">Habby Olusesi</span>
                 </div>
                 <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    <p>I recently graduated from Wake Forest University with a degree in Theatre and Mathematics. I am currently studying Web Development at the UNC Chapel Hill Coding Bootcamp.</p>
                 </div>
                 <div class="card-action">
                     <p><a href="https://github.com/habby-bit" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a><p>
@@ -231,34 +255,34 @@ var aboutContent =
 <div class="featureList">
     <ul class="collection with-header">
         <li class="collection-header"><h4 class="center-header">Core Features</h4></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspBadgeriO allows users to gather information about domains, save queries, and generate meaningful reports.<a href="#!" class="secondary-content">Details</a></div></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspOnce logged in, you gain access to a modular, custom, reporting dashboard.<a href="#!" class="secondary-content">Details</a></div></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAdd your own API keys to unclock the power of Varoius Search APIs.<a href="#!" class="secondary-content">Details</a></div></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspYou are going to have to ask Mike about anything else!<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspBadgeriO allows users to gather information about domains, save queries, and generate meaningful reports.<a href="#organicSearch" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspOnce logged in, you gain access to a modular, custom, reporting dashboard.<a href="#backIndex" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAdd your own API keys to unclock the power of Varoius Search APIs.<a href="#commonFile" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspYou are going to have to ask Mike about anything else!<a href="#emailDiscovery" class="secondary-content">Details</a></div></li>
     </ul>
 </div>
 <div class="container">
     <div class="row">
         <div class="col m11 coreFeatureL">
-            <h5 class="center-header">Organic Search Indexing</h5>
+            <h5 class="center-header" id="organicSearch" >Organic Search Indexing</h5>
             <div class="divider"></div>
             <p>BadgeriO uses advanced queries to dig through the organic search results of popular search engines, to build a clearer picture of the sites’ content quality, structure, and organic reach. </p> 
             <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonL">Click Me</button>
         </div>
         <div class="col m11 coreFeatureR">
-            <h5 class="center-header">Backlink Indexing</h5>
+            <h5 class="center-header" id="backIndex" >Backlink Indexing</h5>
             <div class="divider"></div>
             <p>Digging deep into organic search, BadgeriO scours the internet for websites that backlink to your target site.  Giving you valuable insights into potential affiliates, business partners, or internet communities the site is associated with.</p>
             <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonR">Click Me</button>
         </div>
         <div class="col m11 coreFeatureL">
-            <h5 class="center-header">Common File Search</h5>
+            <h5 class="center-header" id="commonFile">Common File Search</h5>
             <div class="divider"></div>
             <p>This feature attempts to root through organic search results to find common file types like PDFS, PPTS, DOC, XLS, and SWF.  These documents can be treasure-troves for inside contacts, email addresses, corporate structure, company mission statements, product catalogs, and company policies.</p> 
             <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonL">Click Me</button>
         </div>
         <div class="col m11 coreFeatureR">
-            <h5 class="center-header">Email Discovery</h5>
+            <h5 class="center-header" id="emailDiscovery">Email Discovery</h5>
             <div class="divider"></div>
             <p>Sit back and let BadgeriO attempt to dig up email addresses belonging to your target site.  Discovered email addresses will be returned with sources and their last observed date!</p>
             <button class="btn btn-flat blue waves-effect waves-light white-text featureButtonR">Click Me</button>
@@ -285,6 +309,7 @@ var logInModalContent =
         </div>
     </div>
 </div>`;
+
 /**
  * Option to login with email and password, dynamically added to modal after click event
  * @type {template literal}
