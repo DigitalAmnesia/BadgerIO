@@ -33,6 +33,19 @@ $(function(){
             createFirebaseEmailAndPasswordUser(email, password);
         }
     });
+    $('#loginEmailPasswordDropDown').on('click', function(){
+        if($('#emailDropDown').val()!=='' && $('#passwordDropDown').val()!==''){
+            let email = $('#emailDropDown').val();
+            let password = $('#passwordDropDown').val();
+            signInFirebaseEmailAndPassword(email, password);
+        }
+        else if($('#emailDropDown').val()==='' && $('#passwordDropDown').val()!==''){
+            alert("Please enter email!");
+        }
+        else{
+            alert("Please enter password!");
+        }
+    });
     $('createPassword').on('focusout', function(e){
         if ($(this).val() !== $("#createPassword2").val()){
             $("#createPassword2").removeClass("valid").addClass("invalid");
@@ -284,18 +297,18 @@ var logInViaEmail =
             <div class='row'>
                 <div class='input-field col s12'>
                     <input class='validate' type='email' id='email'>
-                    <label for='email' class="changeFormTransitionBehavior">Enter your email</label>
+                    <label for='email' id="emailDropDown" class="changeFormTransitionBehavior">Enter your email</label>
                 </div>
             </div>
             <div class='row'>
                 <div class='input-field col s12'>
                     <input class='validate' type='password' id='password'>
-                    <label for='password' class="changeFormTransitionBehavior">Enter your password</label>
+                    <label for='password' id="passwordDropDown" class="changeFormTransitionBehavior">Enter your password</label>
                 </div>
             </div>
             <center>
                 <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect teal darken-1'>Login</button>
+                <button type='submit' name='btn_login' id= "loginEmailPasswordDropDown" class='col s12 btn btn-large waves-effect teal darken-1'>Login</button>
                 </div>
                 <div class="row">
                 <label><a class='red-text' href='#!'>Forgot Password?</a></label>
