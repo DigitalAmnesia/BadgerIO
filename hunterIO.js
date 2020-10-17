@@ -26,7 +26,7 @@ $("#find-domain").on("click", function(event) {
   // event.preventDefault() can be used to prevent an event's default behavior.
   // Here, it prevents the submit button from trying to submit a form when clicked
     event.preventDefault();
-    var api_key = "##########################################";
+    var api_key = "e65eefd8967b29e191bd94c25a5a44ce895ecaf2";
     var email_finder = `https://api.hunter.io/v2/domain-search?domain=${domain}&api_key=${api_key}`;
   // This .on("click") function will trigger the AJAX Call
     console.log(email_finder);
