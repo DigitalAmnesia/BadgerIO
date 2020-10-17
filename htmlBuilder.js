@@ -153,10 +153,10 @@ var aboutContent =
 `<h4 class="center-header">Site Developers</h4>
 <div class = "container" id="aboutContainer">
     <div class = "row">
-        <div class = "col l3">
-            <div class="card medium" id="Bennett-Card">
+        <div class = "col l3 responsiveProfile">
+            <div class="card large" id="Bennett-Card">
                 <div class="card-image">
-                    <img src="images/sample-1.jpeg">
+                    <img src="images/bgould.jpeg">
                     <span class="card-title">Bennett Gould</span>
                 </div>
                 <div class="card-content">
@@ -168,8 +168,8 @@ var aboutContent =
                 </div>
             </div>
         </div>
-        <div class = "col l3">
-            <div class="card medium" id="Mike-Card">
+        <div class = "col l3 responsiveProfile">
+            <div class="card large" id="Mike-Card">
                 <div class="card-image">
                     <img src="images/sample-1.jpeg">
                     <span class="card-title">Mike Hill</span>
@@ -183,8 +183,8 @@ var aboutContent =
                 </div>
             </div>
         </div>
-        <div class = "col l3">
-            <div class="card medium" id="Habby-Card">
+        <div class = "col l3 responsiveProfile">
+            <div class="card large" id="Habby-Card">
                 <div class="card-image">
                     <img src="images/sample-1.jpeg">
                     <span class="card-title">Habby Olusesi</span>
@@ -198,8 +198,8 @@ var aboutContent =
                 </div>
             </div>
         </div>
-        <div class = "col l3">
-            <div class="card medium" id="Elijah-Card">
+        <div class = "col l3 responsiveProfile">
+            <div class="card large" id="Elijah-Card">
                 <div class="card-image">
                     <img src="images/sample-1.jpeg">
                     <span class="card-title">Elijah Melanson</span>
