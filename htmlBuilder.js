@@ -13,15 +13,28 @@ $(function(){
     $("#aboutBtn").on('click', function(){
         $('.homePageContainer').html(aboutContent);
     });
+
     $("#accountBtn").on('click', function(){
         $('.homePageContainer').html(createAcountContent);
     });
+
     $("#logInBtn").on('click', function(){
-        $('.homePageContainer').html(logInViaEmail);
+        $('.homePageContainer').html(logInMobile);
     });
+
+    $(document).on('click', '#emailSignInButtonMobile', function(){
+        if(!$('#logInEmailDropDownMobile').length){
+        $('#appendToMobile').append(logInViaEmailMobile);
+        }
+        else{
+        $('#logInViaEmailContainerMobile').detach();
+        }
+    });
+
     $('.aboutButton').on('click', function(){
         $('.homePageContainer').html(aboutContent);
     });
+
     $('#emailSignInButton').on('click', function(){
         if(!$('#logInEmailDropDown').length){
         $('#appendToModal').append(logInViaEmail);
@@ -30,9 +43,11 @@ $(function(){
         $('#logInViaEmailContainer').detach();
         }
     });
+
     $('#googleSignInButton').on('click', function(){
         googleLogInFirebase();
     });
+
     $('#createAccountButton').on('click', function(){
         checkIfLocal();
         if($('#createPassword2').hasClass('valid')){
@@ -261,7 +276,6 @@ var aboutContent =
         </div>
     </div>
 </div>`;
-
 /**
  * Log In modal offering different methods to login
  * @type {template literal}
@@ -282,6 +296,7 @@ var logInModalContent =
         </div>
     </div>
 </div>`;
+
 /**
  * Option to login with email and password, dynamically added to modal after click event
  * @type {template literal}
