@@ -1,5 +1,3 @@
-
-
 /**
  * Returned JSON object from hunterIO API call
  * @type {JSON}
