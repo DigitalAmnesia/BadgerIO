@@ -1,3 +1,18 @@
+#pageContainer{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.card-action {
+  line-height: 1.5;
+}
+
+.card-medium .card-content{
+  line-height: 1.1;
+  max-height: 50%;
+}
+
 /* overrites materialize transition background label behavior ***Please leave alone, this tooks hours to figure out*** */
 .changeFormTransitionBehavior {
     background-color: white !important;
@@ -12,33 +27,64 @@
 .log-in-black {
     color: black !important;
 }
+
+#navContainer {
+  min-width: 100% !important;
+  padding: 0px;
+}
+
+nav {
+  padding-right: 50px;
+  padding-left: 0px;
+}
+
 #home-page-logo {
-    margin-left: 5%;
+    margin-left: 3%;
 } 
+.homePageContainer {
+  padding-top: 60px; /* height of sticky header */
+  padding-left: 30px;
+}
+
+.tabs {
+  margin-left: 1%;
+}
+
+#scrollBar {
+  margin-left: 20px;
+}
 /* used to maximize modal area to make forms look better */
 .modal {
     width: 60% !important; 
     max-height: 90% !important;
 }
-.card {
-    width: 20%;
-    margin: 1%;
+
+.modal1 {
+  z-index: 1;
+  background-color: aqua;
+  position: fixed;
+  margin: auto;
+  padding: 50px;
+
 }
-.aboutContainer {
+
+#aboutContainer {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 90%;
+    padding-top: 60px; /* height of sticky header */
 }
 .center-header {
     text-align: center;
 }
 .featureList {
-    width: 86%;
+    width: 90%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-.row {
+.row .col .input-field{
     margin-bottom: 5px;
 }
 #waves-red {
@@ -70,6 +116,7 @@
 }
 .footer-li {
     float: left;
+    margin-bottom: 0px;
 }
 /* for sticky footer */
 body {
@@ -81,15 +128,30 @@ body {
 main {
     flex: 1 0 auto;
 }
+
 .logInOptions {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .logIn {
-    text-align: center;
-    font-size: x-large;
-    color: black !important;
+  text-align: center;
+  font-size: x-large;
+  color: black !important;
+}
+.logInIcon {
+  float: left;
+}
+
+.collection a.collection-item {
+      margin: 0px;
+}
+
+#footerContainer {
+  margin-bottom: 30px;
+  width: 90%;
+  font-size: x-large;
+  color: black !important;
 }
 .logInIcon {
     float: left;
@@ -100,7 +162,7 @@ main {
 * {box-sizing:border-box}
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  /* max-width: 1000px; */
   position: relative;
   margin: auto;
 }

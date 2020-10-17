@@ -151,67 +151,77 @@ function testForMobile(){
  */
 var aboutContent = 
 `<h4 class="center-header">Site Developers</h4>
-<div class="aboutContainer">
-    <div class="card medium" id="Bennett-Card">
-        <div class="card-image">
-            <img src="images/sample-1.jpeg">
-            <span class="card-title">Bennett Gould</span>
+<div class = "container" id="aboutContainer">
+    <div class = "row">
+        <div class = "col l3">
+            <div class="card medium" id="Bennett-Card">
+                <div class="card-image">
+                    <img src="images/sample-1.jpeg">
+                    <span class="card-title">Bennett Gould</span>
+                </div>
+                <div class="card-content">
+                    <p>I have interests in computer programming, Microsoft server management, high performance computing, networking, GPU programming (CUDA, pyCUDA), IoT, cybersecurity, and IaaS/SaaS solutions.</p>
+                </div>
+                <div class="card-action">
+                    <p><a href="https://github.com/bpgould" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a><p>
+                    <p><a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a><p>
+                </div>
+            </div>
         </div>
-        <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        <div class = "col l3">
+            <div class="card medium" id="Mike-Card">
+                <div class="card-image">
+                    <img src="images/sample-1.jpeg">
+                    <span class="card-title">Mike Hill</span>
+                </div>
+                <div class="card-content">
+                    <p>Cyber Intelligence Investigator with more than a decade of experience in online-based investigations. I aim to leverage my certification from the UNC Chapel Hill in fullstack flex development to create intuitive solutions for the investigative community.</p>
+                </div>
+                <div class="card-action">
+                    <p><a href="https://github.com/DigitalAmnesia" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a><p>
+                    <p><a href="https://www.linkedin.com/in/michaelxhill/"><i class="fas fa-user"></i>&nbspPersonal Website</a><p>
+                </div>
+            </div>
         </div>
-        <div class="card-action">
-            <a href="https://github.com/bpgould" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
-            <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
+        <div class = "col l3">
+            <div class="card medium" id="Habby-Card">
+                <div class="card-image">
+                    <img src="images/sample-1.jpeg">
+                    <span class="card-title">Habby Olusesi</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <p><a href="https://github.com/habby-bit" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a><p>
+                    <p><a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a><p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="card medium" id="Mike-Card">
-        <div class="card-image">
-            <img src="images/sample-1.jpeg">
-            <span class="card-title">Mike Hill</span>
-        </div>
-        <div class="card-content">
-            <p></p>
-        </div>
-        <div class="card-action">
-            <a href="https://github.com/DigitalAmnesia" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
-            <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
-        </div>
-    </div>
-    <div class="card medium" id="Habby-Card">
-        <div class="card-image">
-            <img src="images/sample-1.jpeg">
-            <span class="card-title">Habby Olusesi</span>
-        </div>
-        <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-            <a href="https://github.com/habby-bit" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
-            <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
-        </div>
-    </div>
-    <div class="card medium" id="Elijah-Card">
-        <div class="card-image">
-            <img src="images/sample-1.jpeg">
-            <span class="card-title">Elijah Melanson</span>
-        </div>
-        <div class="card-content">
-            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-            <a href="https://github.com/emelanson" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a>
-            <a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a>
+        <div class = "col l3">
+            <div class="card medium" id="Elijah-Card">
+                <div class="card-image">
+                    <img src="images/sample-1.jpeg">
+                    <span class="card-title">Elijah Melanson</span>
+                </div>
+                <div class="card-content">
+                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                </div>
+                <div class="card-action">
+                    <p><a href="https://github.com/emelanson" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a><p>
+                    <p><a href="#"><i class="fas fa-user"></i>&nbspPersonal Website</a><p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <div class="featureList">
     <ul class="collection with-header">
         <li class="collection-header"><h4 class="center-header">Core Features</h4></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspBadgeriO allows users to gather information about domains, save queries, and generate meaningful reports.<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspOnce logged in, you gain access to a modular, custom, reporting dashboard.<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAdd your own API keys to unclock the power of Google x,y,z APIs.<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspYou are going to have to ask Mike about anything else!<a href="#!" class="secondary-content"><i class="material-icons">Details</i></a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspBadgeriO allows users to gather information about domains, save queries, and generate meaningful reports.<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspOnce logged in, you gain access to a modular, custom, reporting dashboard.<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAdd your own API keys to unclock the power of Google x,y,z APIs.<a href="#!" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspYou are going to have to ask Mike about anything else!<a href="#!" class="secondary-content">Details</a></div></li>
     </ul>
 </div>
 <div class="container">
@@ -257,7 +267,7 @@ var aboutContent =
 var logInModalContent = 
 `<div id="logInModal" class="modal">
     <div class="row modal-content" id="appendToModal">
-    <h5 class="center-header">BadgeriO</h5>
+    <h5 class="center-header"><img src="images/favicons/BadgeriOIcon.png" style="max-height: 100px; max-width: 100px;"></h5>
         <div class="col s12">
             <div class="row">
                 <div class="collection logInOptions">
@@ -326,21 +336,21 @@ var logInModalContentAlt =
 var createAcountContent =
 `<div id="createAccountModal" class="modal">
     <div class="row modal-content">
-        <h5 class="center-header">BadgeriO</h5>
+        <h5 class="center-header"><img src="images/favicons/BadgeriOIcon.png" style="max-height: 100px; max-width: 100px;"></h5>
         <div class="col s12">
             <div class="card-panel">
                 <div class="row">
                     <form class="col s12 m12 l12">
                         <div class="row">
                             <div class="input-field col s10">
-                                <input id="createAccountEmail" type="email" class="validate">
+                                <input id="creatAccountEmail" type="email" class="validate">
                                 <label for="createAccountEmail" class="changeFormTransitionBehavior">Your email</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s10">
-                                <input id="createPassword" type="password" class="validate">
-                                <label for="createPassword" class="changeFormTransitionBehavior">Password</label>
+                                <input id="password" type="password" class="validate">
+                                <label for="password" class="changeFormTransitionBehavior">Password</label>
                             </div>
                         </div>
                         <div class="row">
@@ -353,7 +363,7 @@ var createAcountContent =
                             <div class="input-field col s4 modal-close">
                                 <a href="#" class="btn waves-effect waves-light col" id="createAccountButton"><h6>Create Account</h6></a>
                             </div>
-                            <div class="input-field col s3 modal-close">
+                            <div class="input-field col s3 modal-close" id = "cancel" >
                                 <a href="#" class="btn waves-effect waves-light col" id="waves-red"><h6>Cancel</h6></a>
                             </div>
                         </div>
