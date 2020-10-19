@@ -31,9 +31,8 @@ main {
 }
 /* I am not sure why this cannot be applied to the whole ul. Mobile nav css */
 .largerMobile{
-    font-size: 4.5vw !important;
+    font-size: auto !important;
     margin-top: 5vw !important;
-    /* color:red !important; */
 }
 .mobile-demo {
   z-index: 1000;
@@ -70,6 +69,13 @@ nav {
 }
 .tabs {
   margin-left: 1%;
+}
+
+/* SCroll Bar */
+#scrollBar {
+  position: sticky;
+  top: 0;
+  bottom: 0;
 }
 
 /* Sticky footer */

@@ -15,7 +15,7 @@ $(function(){
     });
 
     $("#accountBtn").on('click', function(){
-        $('.homePageContainer').html(createAcountContent);
+        $('.homePageContainer').html(createAcountContentMobile);
     });
 
     $("#logInBtn").on('click', function(){

@@ -41,3 +41,42 @@ var logInViaEmailMobile =
     </div>
 </div>
 </center>`;
+
+var createAcountContentMobile =
+`<div class="row">
+    <h5 class="center-header"><img src="images/favicons/BadgeriOIcon.png" style="max-height: 100px; max-width: 100px;"></h5>
+    <div class="col s12">
+        <div class="card-panel">
+            <div class="row">
+                <form class="col s12 m12 l12">
+                    <div class="row">
+                        <div class="input-field col s10">
+                            <input id="createAccountEmail" type="email" class="validate">
+                            <label for="createAccountEmail" class="changeFormTransitionBehavior">Your email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s10">
+                            <input id="password" type="password" class="validate">
+                            <label for="password" class="changeFormTransitionBehavior">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s10">
+                            <input id="createPassword2" type="password" class="validate">
+                            <label for="createPassword2" class="changeFormTransitionBehavior">Confirm Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <a href="#" class="btn waves-effect waves-light col" id="createAccountButton"><h6>Create Account</h6></a>
+                        </div>
+                        <div class="input-field col s3 modal-close" id = "cancel" >
+                            <a href="#" class="btn waves-effect waves-light col" id="waves-red"><h6>Cancel</h6></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>`;
