@@ -20,6 +20,8 @@ $(function(){
 
     $("#logInBtn").on('click', function(){
         $('.homePageContainer').html(logInMobile);
+        let instance = M.Sidenav.getInstance(mobile-demo);
+        instance.close();
     });
 
     $(document).on('click', '#emailSignInButtonMobile', function(){
@@ -90,6 +92,7 @@ $(function(){
     //initialize Materialize content last so that it is rendered
     $('.modal').modal(); //needed in order to initialize Materialize modals
     $('.sidenav').sidenav(); //needed in order to initialize side bar for mobile menu
+    
 });
 /**
  * Dots action, iterates slide show 

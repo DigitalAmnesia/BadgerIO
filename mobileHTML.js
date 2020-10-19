@@ -4,10 +4,10 @@ var logInMobile =
     <div class="col s12">
         <div class="row">
             <div class="collection logInOptions">
-                <a class="collection-item logIn" id="googleSignInButtonMobile"><i class="fab fa-google logInIcon" style="color:#DB4437;"></i>&nbspGoogle Sign In</a>
-                <a class="collection-item logIn"><i class="fab fa-facebook-square logInIcon" style="color:#3b5998;"></i>&nbspFacebook Sign In</a>
-                <a class="collection-item logIn"><i class="fab fa-apple logInIcon" style="color:#7D7D7D;"></i>&nbspApple Sign In</a>
-                <a class="collection-item logIn" id="emailSignInButtonMobile"><i class="fas fa-envelope logInIcon"></i>&nbspEmail Sign In</a>
+                <a class="collection-item logIn" id="googleSignInButtonMobile"><i class="fab fa-google logInIcon" style="color:#DB4437;"></i>&nbspGoogle</a>
+                <a class="collection-item logIn"><i class="fab fa-facebook-square logInIcon" style="color:#3b5998;"></i>&nbspFacebook</a>
+                <a class="collection-item logIn"><i class="fab fa-apple logInIcon" style="color:#7D7D7D;"></i>&nbspApple</a>
+                <a class="collection-item logIn" id="emailSignInButtonMobile"><i class="fas fa-envelope logInIcon"></i>&nbspEmail</a>
             </div>     
         </div>
     </div>
