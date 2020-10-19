@@ -40,14 +40,13 @@ main {
 
 /* have the log in option stand out for returning customers desktop and mobile */
 .log-in-black {
-    color: black !important;
+    color: wheat !important;
 }
 
 /* Navbar content styling */
 #navContainer{
   min-width: 100% !important;
   padding: 0px;
-
 }
 .nav-extended, .nav-wrapper {
   z-index: 1;
@@ -71,11 +70,14 @@ nav {
   margin-left: 1%;
 }
 
-/* SCroll Bar */
-#scrollBar {
+/* Scroll Bar */
+#scrollBar a{
   position: sticky;
   top: 0;
   bottom: 0;
+  padding-left: 0px;
+  font-size: 20px;
+  line-height: 2;
 }
 
 /* Sticky footer */
@@ -142,7 +144,9 @@ color: black !important;
   float:right !important;
   margin-top: 4%;
   margin-bottom: 1%;
-
+}
+.collection li.collection-item {
+  margin: 10px;
 }
 .featureButtonL {
   margin: 5px;
@@ -240,7 +244,7 @@ margin-right: auto;
 .text {
   color: #f2f2f2;
   background-color: black;
-  font-size: 15px;
+  font-size: 20px;
   padding: 8px 12px;
   position: absolute;
   bottom: 0.001px;
