@@ -399,7 +399,7 @@ var createAcountContent =
                         </div>
                         <div class="row">
                             <div class="input-field col s4">
-                                <a href="#" class="btn waves-effect waves-light col" id="createAccountButton"><h6>Create Account</h6></a>
+                                <a href="#" class="btn waves-effect waves-light col" id="createAccountButton"><h6>Create</h6></a>
                             </div>
                             <div class="input-field col s3 modal-close" id = "cancel" >
                                 <a href="#" class="btn waves-effect waves-light col" id="waves-red"><h6>Cancel</h6></a>
