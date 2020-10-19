@@ -10,16 +10,23 @@ $(function(){
     $('#signInFirebase').attr('href','#logInModal').addClass('modal-trigger');
   
     // *** On Click Functions ***
+    
     $("#aboutBtn").on('click', function(){
         $('.homePageContainer').html(aboutContent);
+        let instance = M.Sidenav.getInstance(document.getElementById('mobile-demo'));
+        instance.close();
     });
 
     $("#accountBtn").on('click', function(){
         $('.homePageContainer').html(createAcountContentMobile);
+        let instance = M.Sidenav.getInstance(document.getElementById('mobile-demo'));
+        instance.close();
     });
 
     $("#logInBtn").on('click', function(){
         $('.homePageContainer').html(logInMobile);
+        let instance = M.Sidenav.getInstance(document.getElementById('mobile-demo'));
+        instance.close();
     });
 
     $(document).on('click', '#emailSignInButtonMobile', function(){
@@ -90,6 +97,7 @@ $(function(){
     //initialize Materialize content last so that it is rendered
     $('.modal').modal(); //needed in order to initialize Materialize modals
     $('.sidenav').sidenav(); //needed in order to initialize side bar for mobile menu
+    
 });
 /**
  * Dots action, iterates slide show 
