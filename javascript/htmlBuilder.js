@@ -42,6 +42,10 @@ $(function(){
         $('.homePageContainer').html(aboutContent);
     });
 
+    $('#reportsNavButton').on('click', function(){
+        $('#pageTemplateContainer').html(reportContent);
+    });
+
     $('#emailSignInButton').on('click', function(){
         if(!$('#logInEmailDropDown').length){
         $('#appendToModal').append(logInViaEmail);
@@ -410,4 +414,54 @@ var createAcountContent =
             </div>
         </div>
       </div>
+</div>`;
+var reportContent =
+`<div class="container"></div>
+    <div class="row">
+        <div class="col s7 push-s5"><span class="flow-text">
+            <!-- This form will be where users input data about the movies -->
+            <form id="domain-form">
+                <label for="domain-input" class="changeFormTransitionBehavior">Enter Domain Name</label>
+                <input type="text" id="domain-input"><br>
+                <!-- This button will trigger our AJAX call -->
+                <input id="find-domain" type="submit" value="Domain Search">
+            </form>
+            </span>
+        </div>
+        <div class="col s5 pull-s7">
+            <span class="flow-text">5-columns wide pulled to the left by 7-columns. We should use this space to place some stats</span>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col s12">
+            <table id="emailDiscoveryResults">
+                <thead>
+                    <tr>
+                        <th><b>Domain</b></th>
+                        <th><b>FName</b></th>
+                        <th><b>LName</b></th>
+                        <th><b>Email</b></th>
+                        <th><b>Confidence</b></th>
+                        <th><b>Extracted On</b></th>
+                        <th><b>Last Seen</b></th>
+                        <th><b>On Page</b></th>
+                        <th><b>Source</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="emailReturnData">
+                        <td>badger.com</td>
+                        <td>iO</td>
+                        <td>Badger</td>
+                        <td>iO@BadgeriO.com</td>
+                        <td>100</td>
+                        <td>2020-10-15</td>
+                        <td>2020-10-17</td>
+                        <td>Found</td>
+                        <td>http://badgerIO.com/</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>`;
