@@ -167,22 +167,7 @@ function showSlidesAuto() {
 function checkIfLocal(){
     if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === ""){
         alert("Google Sign in only works from HTTP/S, not local!");//reminder to devs
-        //getKeys();
     }
-}
-//TODO: getKeys() not working, figure out a way to load API keys from .gitignored file for local testing
-/**
- * This is a function for getting API keys when running locally, it reads in the APIkeys2.txt file
- * @return {string[]}
- */
-function getKeys(){
-    let file = $('<file>').attr('href','file:APIkeys2.txt');
-    let reader = new FileReader();
-    reader.addEventListener('load', function(e){
-        let text = e.target.result;
-        alert(text);
-    });
-    reader.readAsText(file);
 }
 /**
  * Checks if the user is on a mobile device and if so enters past the control statement
@@ -191,7 +176,6 @@ function getKeys(){
 function testForMobile(){
     if (/Mobi|Android/i.test(navigator.userAgent)) {
         $('.brand-logo').removeAttr('id'); //centers the logo on mobile devices -- remember to refresh in inspector
-        //remove tab images since they do not wrap for mobile devices
     }
 }
 /**
