@@ -201,7 +201,7 @@ var aboutContent =
         <div class = "col l3 responsiveProfile">
             <div class="card large" id="Bennett-Card">
                 <div class="card-image">
-                    <img src="images/bgould.jpeg">
+                    <img src="images/bgould.jpeg" alt="Bennett Gould, site developer, profile picture">
                     <span class="card-title">Bennett Gould</span>
                 </div>
                 <div class="card-content">
@@ -216,7 +216,7 @@ var aboutContent =
         <div class = "col l3 responsiveProfile">
             <div class="card large" id="Mike-Card">
                 <div class="card-image">
-                    <img src="images/Mike.jpg">
+                    <img src="images/Mike.jpg" alt="Mike Hill, site developer, profile picture">
                     <span class="card-title">Mike Hill</span>
                 </div>
                 <div class="card-content">
@@ -231,7 +231,7 @@ var aboutContent =
         <div class = "col l3 responsiveProfile">
             <div class="card large" id="Habby-Card">
                 <div class="card-image">
-                    <img src="images/Habby.jpg">
+                    <img src="images/Habby.jpg" alt="Habby Olusesi, site developer, profile picture">
                     <span class="card-title">Habby Olusesi</span>
                 </div>
                 <div class="card-content">
@@ -246,7 +246,7 @@ var aboutContent =
         <div class = "col l3 responsiveProfile">
             <div class="card large" id="Elijah-Card">
                 <div class="card-image">
-                    <img src="images/sample-1.jpeg">
+                    <img src="images/sample-1.jpeg" alt="Elijah Melanson, site developer, profile picture">
                     <span class="card-title">Elijah Melanson</span>
                 </div>
                 <div class="card-content">
