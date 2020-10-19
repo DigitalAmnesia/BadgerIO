@@ -3,32 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BadgeriO | Reports</title>
-  <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
+  <title>BadgeriO | Dashboard</title>
+  <link rel="icon" type="image/png" href="../images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../images/favicons/favicon-32x32.png" sizes="32x32">
   <!-- CSS RESET added for best practice -->
-  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="../stylesheets/reset.css">
   <!-- Materialize - Compressed CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- Manual Override CSS -->
-  <link rel="stylesheet" href="manualStyle.css">
+  <link rel="stylesheet" href="../stylesheets/manualStyle.css">
   <!-- Dashboard CSS-->
-  <link rel="stylesheet" href="assets/dashboardStyle.css">
+  <link rel="stylesheet" href="../stylesheets/dashboardStyle.css">
   <!-- Font Awesome dependency -->
   <script src="https://kit.fontawesome.com/7fcf630873.js" crossorigin="anonymous"></script>
-    <!-- <style>
+    <style>
         .container{
             margin: 70px auto;
             overflow: hidden;
             width: 80%;
             text-align: center;
         }
-    </style> -->
+    </style>
 </head>
 <body>
     <nav class="nav-extended teal darken-1">
         <div class="nav-wrapper">
-          <a href="index.html" class="brand-logo" id="home-page-logo"><img src="images/favicons/BadgeriOIcon.png" style="max-height: 100px; max-width: 100px;"></a>
+          <a href="../index.html" class="brand-logo" id="home-page-logo"><img src="../images/favicons/BadgeriOIcon.png" style="max-height: 100px; max-width: 100px;"></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a class="aboutButton" href="#">About</a></li>
@@ -39,8 +39,8 @@
         <div class="nav-content">
           <ul class="tabs tabs-transparent">
             <li class="tab"><a href="#"><i class="fas fa-search"></i>&nbspQueries</a></li>
-            <li class="tab"><a href="#"><i class="fas fa-chart-pie"></i>&nbspDashboards</a></li>
-            <li class="tab"><a href="#"><i class="far fa-chart-bar"></i><b>&nbspReports</b></a></li>
+            <li class="tab"><a href="#"><i class="fas fa-chart-pie"></i><b>&nbspDashboards</b></a></li>
+            <li class="tab"><a href="#"><i class="far fa-chart-bar"></i>&nbspReports</a></li>
           </ul>
         </div>
       </nav>
@@ -57,65 +57,25 @@
   <div class="row">
         <div class="col s12">
         <div class="card-panel white" id="pageTemplateContainer">
-          <div class="container"></div>
-          <div class="row">
-            <div class="col s7 push-s5"><span class="flow-text">
-           
-              <!-- This form will be where users input data about the movies -->
-              <form id="domain-form">
-              <label for="domain-input">Enter Domain Name</label>
-              <input type="text" id="domain-input"><br>
-            <!-- This button will trigger our AJAX call -->
+            <div class="container">
 
-            <input id="find-domain" type="submit" value="Domain Search">
-            </form>
-  
-            </span>
-          </div>
-            <div class="col s5 pull-s7"><span class="flow-text">5-columns wide pulled to the left by 7-columns. We should use this space to place some stats</span></div>
-          </div> 
-          <div class="row">
-              <div class="col s12">
-                <table id="emailDiscoveryResults">
-                  <thead>
-                    <tr>
-                        <th><b>Domain</b></th>
-                        <th><b>FName</b></th>
-                        <th><b>LName</b></th>
-                        <th><b>Email</b></th>
-                        <th><b>Confidence</b></th>
-                        <th><b>Extracted On</b></th>
-                        <th><b>Last Seen</b></th>
-                        <th><b>On Page</b></th>
-                        <th><b>Source</b></th>
-                    </tr>
-                  </thead>
-          
-                  <tbody>
-                    <tr id="emailReturnData">
-                      <td>badger.com</td>
-                      <td>iO</td>
-                      <td>Badger</td>
-                      <td>iO@BadgeriO.com</td>
-                      <td>100</td>
-                      <td>2020-10-15</td>
-                      <td>2020-10-17</td>
-                      <td>Found</td>
-                      <td>http://badgerIO.com/</td>
-                    </tr>
+               <div id="chart"></div>
+               
+                
 
-                  </tbody>
-                </table>
-              </div>
+
+
+
+
+
+
+
+
+
             </div>
-
-          </div>
-      </div>
-      </div>
-</div>  
-
-
-
+        </div>
+        </div>
+  </div>
   <!-- Sticky Footer - on all pages -->
   <footer class="page-footer teal darken-1">
     <div class="container">
@@ -155,7 +115,7 @@
   <!-- Firebase Auth import -->
   <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
   <!-- Initialize and connect to Firebase -->
-  <script src="firebase-init.js"></script>  
+  <script src="../javascript/firebase-init.js"></script>  
   <!-- ***** Firebase code ends ***** -->
     
   <!-- Materialize - Compressed JavaScript -->
@@ -164,13 +124,13 @@
   <!-- Graphing API - Apex Charts -->
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-  <script src="htmlBuilder.js"></script>
+  <script src="../javascript/htmlBuilder.js"></script>
   <!-- Calls to Organic Search API -->
-  <script src="serpStack.js"></script>
+  <script src="../javascript/serpStack.js"></script>
   <!-- Calls to HunterIO API -->
-  <script src="hunterIO.js"></script>
+  <script src="../javascript/hunterIO.js"></script>
   <!-- AEPX Dashboard JS -->
-  <script src="hunterIO.js"></script>
+  <script src="../javascript/hunterIO.js"></script>
 
 
 </body>

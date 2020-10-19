@@ -7,11 +7,11 @@
   <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
   <!-- CSS RESET added for best practice -->
-  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="stylesheets\reset.css">
   <!-- Materialize - Compressed CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- Manual Override CSS -->
-  <link rel="stylesheet" href="manualStyle.css">
+  <link rel="stylesheet" href="stylesheets\manualStyle.css">
   <!-- Collapsed Icon for Navbar -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Font Awesome dependency -->
@@ -34,8 +34,8 @@
             <div class="nav-content">
               <ul class="tabs tabs-transparent">
                 <li class="tab"><a href="#"><i class="fas fa-search"></i>&nbspQueries</a></li>
-                <li class="tab"><a href="dashboard.html"><i class="fas fa-chart-pie"></i>&nbspDashboards</a></li>
-                <li class="tab"><a href="emailReport.html"><i class="far fa-chart-bar"></i>&nbspReports</a></li>
+                <li class="tab"><a href="html\dashboard.html"><i class="fas fa-chart-pie"></i>&nbspDashboards</a></li>
+                <li class="tab"><a href="html\emailReport.html"><i class="far fa-chart-bar"></i>&nbspReports</a></li>
               </ul>
             </div>
           </nav>
@@ -146,7 +146,7 @@
   <!-- Firebase Auth import -->
   <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
   <!-- Initialize and connect to Firebase -->
-  <script src="firebase-init.js"></script>  
+  <script src="javascript\firebase-init.js"></script>  
   <!-- ***** Firebase code ends ***** -->
     
   <!-- Materialize - Compressed JavaScript -->
@@ -155,8 +155,8 @@
   <!-- Graphing API - Apex Charts -->
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-  <script src="htmlBuilder.js"></script>
-  <script src="mobileHTML.js"></script>
-  <script src="serpStack.js"></script>
+  <script src="javascript\htmlBuilder.js"></script>
+  <script src="javascript\mobileHTML.js"></script>
+  <script src="javascript\serpStack.js"></script>
 </body>
 </html>
