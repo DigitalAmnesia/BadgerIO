@@ -10,17 +10,22 @@ $(function(){
     $('#signInFirebase').attr('href','#logInModal').addClass('modal-trigger');
   
     // *** On Click Functions ***
+    
     $("#aboutBtn").on('click', function(){
         $('.homePageContainer').html(aboutContent);
+        let instance = M.Sidenav.getInstance(document.getElementById('mobile-demo'));
+        instance.close();
     });
 
     $("#accountBtn").on('click', function(){
         $('.homePageContainer').html(createAcountContentMobile);
+        let instance = M.Sidenav.getInstance(document.getElementById('mobile-demo'));
+        instance.close();
     });
 
     $("#logInBtn").on('click', function(){
         $('.homePageContainer').html(logInMobile);
-        let instance = M.Sidenav.getInstance(mobile-demo);
+        let instance = M.Sidenav.getInstance(document.getElementById('mobile-demo'));
         instance.close();
     });
 
