@@ -1,5 +1,5 @@
 https://bpgould.github.io/FullStackProject1/
-![Project Introduction](https://github.com/bpgould/FullStackProject1/upload/main/GIFs/readme_order_1.jpg)
+![Project Introduction](/GIFs/readme_order_1.jpg)
 
 # FullStack Project 1 Summary
 This project was completed by Mike Hill, Bennett Gould, Habby Olusesi, and Elijah Melanson. Within the project, we utilize the Materialize (Google) front end library, various Google APIs, and Google Firebase for a mBaaS (Mobile Backend-as-a-Service).
