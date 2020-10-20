@@ -1,5 +1,5 @@
 https://bpgould.github.io/FullStackProject1/
-![Project Introduction](https://github.com/bpgould/FullStackProject1/upload/main/GIFs/readme_order_1.jpg)
+![Project Introduction](/GIFs/readme_order_1.jpg)
 
 # FullStack Project 1 Summary
 This project was completed by Mike Hill, Bennett Gould, Habby Olusesi, and Elijah Melanson. Within the project, we utilize the Materialize (Google) front end library, various Google APIs, and Google Firebase for a mBaaS (Mobile Backend-as-a-Service).
@@ -33,7 +33,7 @@ The app will attempt to collect the following information for users about a doma
 
 ## Currently Completed Project Goals
 ## Demo: Google Sign-In and Firebase Integration
-![Google Sign-In Demo](https://github.com/bpgould/FullStackProject1/upload/main/GIFs/readme_order_2.gif)
+![Google Sign-In Demo](/GIFs/readme_order_2.gif)
 
  - Support for Google Accounts
  - Support for Facebook Accounts
@@ -42,7 +42,7 @@ The app will attempt to collect the following information for users about a doma
  - Utilizing Firebase API in order to handle account creation, authorization, automated password recovery, etc.
 
 ## Demo: Domain Email Report
-![Email Report Demo](https://github.com/bpgould/FullStackProject1/upload/main/GIFs/readme_order_3.gif)
+![Email Report Demo](/GIFs/readme_order_3.gif)
 
 ### This feature attempts to find email addresses belonging to the target website. 
 The following information is returned in this report:
@@ -55,7 +55,7 @@ The following information is returned in this report:
  - The source URL where the email address was discovered
  
 ## Demo: Organic Index Report
-![Organic Demo](https://github.com/bpgould/FullStackProject1/upload/main/GIFs/readme_order_4.gif)
+![Organic Demo](/GIFs/readme_order_4.gif)
 
 ### This feature attempts to collect as many URLS it can from traditional search engine results and present them in an easy to read manner.  This allows the user to quickly assess how the site is structured, focus of content, and a general estimate of content quantity and quality.  
 
@@ -65,17 +65,17 @@ The following information is returned in this report:
  - URL of the page
 
 ## Performance Ratings
-![Performance Ratings](https://github.com/bpgould/FullStackProject1/upload/main/GIFs/Performance_Indicators.jpg)
+![Performance Ratings](/GIFs/Performance_Indicators.jpg)
 
 ## Under The Hood
 ### Analytics & Widgets
-![Analytics & Widgets Icons](https://github.com/bpgould/FullStackProject1/upload/main/GIFs/UnderTheHood_Order_1.jpg)
+![Analytics & Widgets Icons](/GIFs/UnderTheHood_Order_1.jpg)
 
 ### Frameworks, Mobile Components, & CDNS
-![Analytics & Widgets Icons](https://github.com/bpgould/FullStackProject1/upload/main/GIFs/UnderTheHood_Order_2.jpg)
+![Analytics & Widgets Icons](/GIFs/UnderTheHood_Order_2.jpg)
 
 ## Meet The Developers
-![The Developers](https://github.com/bpgould/FullStackProject1/upload/main/GIFs/Meet_The_Team.jpg)
+![The Developers](/GIFs/Meet_The_Team.jpg)
 
 
 
