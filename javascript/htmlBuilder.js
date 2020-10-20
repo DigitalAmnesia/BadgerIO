@@ -482,12 +482,19 @@ var reportContentMobile =
     <h5 class="center-header">Full Dashboards Only Available On Web UI</h5>
     <img src="images/reportCapture.jpg" alt="Image of an example report" class="mobileImage">
 </div>`; 
+/**
+ * Queries tab home page html content
+ * @type {template literal}
+ */
 var queryHomePageTabContent =
     `<div class="col s2">
         <img src="images/BadgerIcon.jpg" style="height: 100px; width: 100px;">
         <form id="organic-form">
             <label for="organic-input" class="changeFormTransitionBehavior">Enter Domain Name</label>
             <input type="text" id="organic-input">
+            <br>
+            <label for="orgain-APIkey-input" class="changeFormTransitionBehavior">Enter/Paste API key</label>
+            <input type="text" id="organic-APIkey-input">
             <input id="find-organic" type="submit" value="Organic Search">
         </form>
     </div>
@@ -517,7 +524,11 @@ var queryHomePageTabContent =
             </table>
         </div>
     </div>`;  
-var queryHomePageTabContentMobile =
+/**
+ * Queries tab home page html content for mobile
+ * @type {template literal}
+ */
+    var queryHomePageTabContentMobile =
 `<div class="row">
     <h5 class="center-header">Full Dashboards Only Available On Web UI</h5>
     <img src="images/organicReportForMobile.jpg" alt="Image of an example organic search report" class="mobileImage">
