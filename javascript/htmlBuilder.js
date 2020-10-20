@@ -229,7 +229,7 @@ var aboutContent =
         <div class = "col l3 responsiveProfile">
             <div class="card large" id="Habby-Card">
                 <div class="card-image">
-                    <img src="images/Habby.jpg" alt="Habby Olusesi, site developer, profile picture">
+                    <img src="images/HabbyA.jpg" alt="Habby Olusesi, site developer, profile picture">
                     <span class="card-title">Habby Olusesi</span>
                 </div>
                 <div class="card-content">
@@ -244,11 +244,11 @@ var aboutContent =
         <div class = "col l3 responsiveProfile">
             <div class="card large" id="Elijah-Card">
                 <div class="card-image">
-                    <img src="images/sample-1.jpeg" alt="Elijah Melanson, site developer, profile picture">
+                    <img src="images/ElijahMheadshot.jpg" alt="Elijah Melanson, site developer, profile picture">
                     <span class="card-title">Elijah Melanson</span>
                 </div>
                 <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                    <p>Berklee-educated guitarist and music educator foraying into web design.  Seeking to create a new career with experience in audio engineering and visual design.</p>
                 </div>
                 <div class="card-action">
                     <p><a href="https://github.com/emelanson" target="_blank"><i class="fab fa-github"></i>&nbspGitHub</a><p>
@@ -262,7 +262,7 @@ var aboutContent =
     <ul class="collection with-header">
         <li class="collection-header"><h4 class="center-header">Core Features</h4></li>
         <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspBadgeriO allows users to gather information about domains, save queries, and generate meaningful reports.<a href="#organicSearch" class="secondary-content">Details</a></div></li>
-        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspOnce logged in, you gain access to a modular, custom, reporting dashboard.<a href="#backIndex" class="secondary-content">Details</a></div></li>
+        <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspOnce you are logged in, you gain access to a modular, custom, reporting dashboard.<a href="#backIndex" class="secondary-content">Details</a></div></li>
         <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspAdd your own API keys to unclock the power of Varoius Search APIs.<a href="#commonFile" class="secondary-content">Details</a></div></li>
         <li class="collection-item"><div><i class="fas fa-angle-double-right"></i>&nbspYou are going to have to ask Mike about anything else!<a href="#emailDiscovery" class="secondary-content">Details</a></div></li>
     </ul>
