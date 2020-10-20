@@ -1,15 +1,13 @@
 let organicResults;
 organicResultsList=[];
-let position;
+
 $("#find-organic").on("click", function(event) {
     event.preventDefault();
     // Here we grab the text from the input box
       var domain = $("#organic-input").val();
-        console.log(domain);  
-  
-      
-      var api_key = "abbdaa341ded39791b47a9bc026932e3";
-      var organic_finder = `http://api.serpstack.com/search?access_key=${api_key}&query=link%3A${domain}&num=100`;
+      console.log(domain);  
+      var api_key = "#######################";
+      var organic_finder = `http://api.serpstack.com/search?access_key=${api_key}&query=site%3A${domain}&num=1000`;
 
     // This .on("click") function will trigger the AJAX Call
       console.log(organic_finder);
@@ -18,38 +16,40 @@ $("#find-organic").on("click", function(event) {
       console.log(`organic lookup made for: ${domain}`);
       var indexQueryURL = organic_finder;
     // Call to Hunter.IO
-    // $.ajax({
-    //     url: indexQueryURL,
-    //     method: "GET"
-    //   }).then(function(response) {
-    //     organic_Source_List = response;
-    //     console.log(organic_Source_List);
-    //     var resultsTotal = organic_Source_List.search_information.total_results; 
-
-    // });
-    $.getJSON("serpStack.json", function(json) {
-    // console.log(json); // this will show the info it in firebug console
-    organicResults = json;
+    $.ajax({
+        url: indexQueryURL,
+        method: "GET"
+      }).then(function(response) {
+    var organicResults = response;
     var resultsTotal = parseInt(organicResults.search_information.total_results);
-    
+    var displayTotalResults = document.getElementById('organicURLS').innerHTML = resultsTotal;
     console.log(resultsTotal);
     for (i = 0; i < resultsTotal; i++){
-        position = organicResults.organic_results[i].position;
+        var table = document.getElementById("organicResults");
+        // Create an empty <tr> element and add it to the 1st position of the table:
+        var row = table.insertRow(-1);
+        // Insert new cells:
+        var displayPosition = row.insertCell(0);
+        var displayTitle = row.insertCell(1);
+        var displayUrl = row.insertCell(2);
+        // var displayPosition = document.getElementById('organicReturnData');
+        var position = organicResults.organic_results[i].position;
+        displayPosition.innerHTML = position;
         var title = organicResults.organic_results[i].title;
+        displayTitle.innerHTML = title;
         var snippet = organicResults.organic_results[i].snippet;
         var prerender = organicResults.organic_results[i].prerender;
         var cachePage = organicResults.organic_results[i].cached_page_url;
         var relatedPages = organicResults.organic_results[i].related_pages_url;
         var url = organicResults.organic_results[i].url;
+        displayUrl.innerHTML = url;
         var domain = organicResults.organic_results[i].domain;
         organicResultsList.push([position,title,snippet,prerender,cachePage,relatedPages,url,domain]);
-        
     }   
-    console.log(organicResultsList[1][0]);
     });   
     
 });
-//http://api.serpstack.com/search?access_key=abbdaa341ded39791b47a9bc026932e3&query=linke%3Adigg.com&num=100
+
 
 
 

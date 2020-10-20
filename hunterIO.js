@@ -5,8 +5,7 @@
  */
 var email_Source_List={};
 var badgerEmailList = [];
-// const sourceCount = 0;
-// const uniqueEmails = 0;
+
 
 
 // This .on("click") function will trigger the AJAX Call
@@ -81,12 +80,6 @@ $("#find-domain").on("click", function(event) {
           var lastSeenDate = row.insertCell(6);  
           var onPage =   row.insertCell(7); 
           var source =   row.insertCell(7);
-          // var a = document.createElement('a');
-          // var link = document.createTextNode('this is a link');
-          // a.appendChild(link);
-          // a.title = "This is a Link";
-          // a.href = badgerEmailList[i][14];
-          // // Add the content to the cells
           domain.innerHTML = badgerEmailList[i][0];
           fname.innerHTML = badgerEmailList[i][1];
           lname.innerHTML = badgerEmailList[i][2];
@@ -98,10 +91,7 @@ $("#find-domain").on("click", function(event) {
           source.innerHTML = badgerEmailList[i][13];
 
       }
-      // var unique = ( value, index, self) => {
-      //   return self.indexOf(value) === index;
-      // }
-      
+
     }); 
       
 });
