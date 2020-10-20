@@ -51,6 +51,15 @@ $(function(){
         }
     });
 
+    $('#queryNavButton').on('click', function(){
+        if(testForMobile() === 'notMobile'){
+        $('#pageTemplateContainer').html(queryHomePageTabContent);
+        }
+        else{
+        $('#pageTemplateContainer').html(queryHomePageTabContentMobile);    
+        }
+    });
+
     $('#emailSignInButton').on('click', function(){
         if(!$('#logInEmailDropDown').length){
         $('#appendToModal').append(logInViaEmail);
@@ -409,6 +418,10 @@ var createAcountContent =
         </div>
       </div>
 </div>`;
+/**
+ * Reports tab home page html content
+ * @type {template literal}
+ */
 var reportContent =
 `<div class="container">
         <div class="row">
@@ -460,9 +473,53 @@ var reportContent =
         </div>
     </div>
 </div>`;
+/**
+ * Reports tab home page html content for mobile
+ * @type {template literal}
+ */
 var reportContentMobile =
 `<div class="row">
     <h5 class="center-header">Full Dashboards Only Available On Web UI</h5>
     <img src="images/reportCapture.jpg" alt="Image of an example report" class="mobileImage">
-</div>`;        
+</div>`; 
+var queryHomePageTabContent =
+    `<div class="col s2">
+        <img src="images/BadgerIcon.jpg" style="height: 100px; width: 100px;">
+        <form id="organic-form">
+            <label for="organic-input" class="changeFormTransitionBehavior">Enter Domain Name</label>
+            <input type="text" id="organic-input">
+            <input id="find-organic" type="submit" value="Organic Search">
+        </form>
+    </div>
+    <div class="col s10">
+        <div class="flow-text" style="font-size: medium !important;">
+            <p><b><u>Some Details</u></b></p><br>
+            <p>Organic URLs Found: <span id="organicURLS"></span></p>
+        </div>    
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <table id="organicResults" style="min-width: max-content; max-width: 1200; width: 100%; word-break: break-all;">
+                <thead>
+                    <tr>
+                        <th><b><u>Rank</u></b></th>
+                        <th><b><u>Title</u></b></th>
+                        <th><b><u>URL</u></b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="organicReturnData">
+                        <td>X</td>
+                        <td>BadgeriO Digg Up Some Domain Intelligence</td>
+                        <td>www.badgerIO.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>`;  
+var queryHomePageTabContentMobile =
+`<div class="row">
+    <h5 class="center-header">Full Dashboards Only Available On Web UI</h5>
+    <img src="images/organicReportForMobile.jpg" alt="Image of an example organic search report" class="mobileImage">
+</div>`;     
         
