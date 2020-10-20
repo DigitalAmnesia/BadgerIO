@@ -176,7 +176,7 @@ function checkIfLocal(){
 }
 /**
  * Checks if the user is on a mobile device and if so enters past the control statement
- * @return {void}
+ * @return {string} 'mobile' or 'notMobile'
  */
 function testForMobile(){
     if (/Mobi|Android/i.test(navigator.userAgent)) {
