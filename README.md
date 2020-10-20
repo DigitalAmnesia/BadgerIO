@@ -11,9 +11,12 @@ Further improvements:
 (2) Add additional login options including Apple and Facebook
 (3) Implement HTML5 templating 
 (4) Build out user profile capability and API key user attributes stored in Firebase
+(5) Allow for custom dashboards via Apex Charts integration
+(6) Re-assess data persistence and the minimize Firebase bandwidth costs by optimizing data structures for the Real Time Database and Firestore
+(7) Implement a feature allowing users to query website content via Regex -- expand on email/contact scraping abilities
 
 # Our User Story
-This app was designed to assist Marketing Analysts, SEO Specialist, Cyber Intelligence Investigators, or just generally curious people, in aggregating information sources about a website of interest.  The end goal is to provide a one-click solution that will make anyone a cyber-sleuth, without having to understand advanced search operators, or the ever changing digital sources that provide useful Open & Closed Source Intelligence.
+This app was designed to assist Marketing Analysts, SEO Specialist, Cyber Intelligence Investigators, or just generally curious people, in aggregating information sources about a website of interest. The end goal is to provide a one-click solution that will make anyone a cyber-sleuth, without having to understand advanced search operators, or the ever changing digital sources that provide useful Open & Closed Source Intelligence.
 
 ## Project Goals:
 The app will attempt to collect the following information for users about a domain: 
@@ -25,17 +28,18 @@ The app will attempt to collect the following information for users about a doma
  - Are there any physical addresses on the site?
  - Are there any Social Media accounts referenced on the site?
  - What is the anticipated traffic of the site?
- - Findings will be presented in an easy to read manner
+ - Findings will be presented in an easy to read manner.
  - The app will require users to sign up for the service and authenticate before submitting queries. 
 
 ## Currently Completed Project Goals
-## Demo: Google Oauth, Firebase, minify/obfuscate JS
-![Oauth Demo](https://drive.google.com/uc?export=view&id=1CrR2gFKCqPjZG8lR0n93Yb_bRDN0gf32)
+## Demo: Google Sign-In and Firebase Integration
+![Google Sign-In Demo](https://drive.google.com/uc?export=view&id=1CrR2gFKCqPjZG8lR0n93Yb_bRDN0gf32)
 
  - Support for Google Accounts
  - Support for Facebook Accounts
  - Support for Apple Accounts
  - Support for traditional Email Accounts
+ - Utilizing Firebase API in order to handle account creation, authorization, automated password recovery, etc.
 
 ## Demo: Domain Email Report
 ![Email Report Demo](https://drive.google.com/uc?export=view&id=1J-FutnuqGmil0E9gHZUVRRDWiw67yUQP)
