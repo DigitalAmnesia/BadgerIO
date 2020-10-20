@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BadgeriO | Reports</title>
+  <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
+  <!-- CSS RESET added for best practice -->
+  <link rel="stylesheet" href="reset.css">
+  <!-- Materialize - Compressed CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Manual Override CSS -->
+  <link rel="stylesheet" href="manualStyle.css">
+  <!-- Dashboard CSS-->
+  <link rel="stylesheet" href="assets/dashboardStyle.css">
+  <!-- Font Awesome dependency -->
+  <script src="https://kit.fontawesome.com/7fcf630873.js" crossorigin="anonymous"></script>
+    <!-- <style>
+        .container{
+            margin: 70px auto;
+            overflow: hidden;
+            width: 80%;
+            text-align: center;
+        }
+    </style> -->
+</head>
+<body>
+    <nav class="nav-extended teal darken-1">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo" id="home-page-logo"><img src="images/favicons/BadgeriOIcon.png" style="max-height: 100px; max-width: 100px;"></a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a class="aboutButton" href="#">About</a></li>
+            <li><a id="createAccountTrig" href="#">Create Account</a></li>
+            <li><a class="log-in-black" id="signInFirebase" href="#">Log In</a></li>
+          </ul>
+        </div>
+        <div class="nav-content">
+          <ul class="tabs tabs-transparent">
+            <li class="tab"><a href="#"><i class="fas fa-search"></i>&nbspQueries</a></li>
+            <li class="tab"><a href="#"><i class="fas fa-chart-pie"></i>&nbspDashboards</a></li>
+            <li class="tab"><a href="#"><i class="far fa-chart-bar"></i><b>&nbspReports</b></a></li>
+          </ul>
+        </div>
+      </nav>
+    <ul class="sidenav teal accent-3" id="mobile-demo">
+        <li><a class="largerMobile btn" href="#">About</a></li>
+        <li><a class="largerMobile btn" href="#">Create Account</a></li>
+        <li><a class="largerMobile btn log-in-black" href="#">Log In</a></li>
+    </ul>
+  <!-- Create an Account Modal-->
+  <div class="createAnAccount"></div>
+  <!-- Log In Modal -->
+  <div class="logInModal"></div>
+  <!-- Main Page Template - everything else get added inside of the homePageContainer -->
+
+    <div class="row">
+      <div class="col s12">
+        <!-- <div class="col s12"> -->
+        <div class="card-panel white" id="pageTemplateContainer">
+          <!-- <div class="container"></div> -->
+            <div class="col s2">
+                <!-- <span class="flow-text">asdf</span> -->
+                <img src="images/BadgerIcon.jpg" style="height: 100px; width: 100px;">
+                <form id="domain-form">
+                  <label for="domain-input">Enter Domain Name</label>
+                  <input type="text" id="domain-input">
+                  <!-- This button will trigger our AJAX call -->
+                  <input id="find-domain" type="submit" value="Domain Search">
+                </form>
+              </div>
+
+            <div class="col s10">
+                <div class="flow-text" style="font-size: medium !important;">
+                  <p><b><u>Some Details</u></b></p><br>
+                  <p>Emails Found: <span id="emailCount"></span></p>
+                </div>    
+            </div>
+
+
+            <div class="row">
+              <div class="col s12">
+                <table id="emailDiscoveryResults" style="min-width: max-content; max-width: 1200; width: 100%; word-break: break-all;">
+                <!-- <table id="emailDiscoveryResults" style="table-layout:auto; width: 200px"></table> -->
+                  <thead>
+                    <tr >
+                      <th><b>Domain</b></th>
+                      <th><b>FName</b></th>
+                      <th><b>LName</b></th>
+                      <th><b>Email</b></th>
+                      <th><b>Conf</b></th>
+                      <th><b>Extracted On</b></th>
+                      <th><b>Last Seen</b></th>
+                      <th><b>On Page</b></th>
+                      <th><b>Source</b></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                      <tr id="emailReturnData">
+                        <td>badgerIO.com</td>
+                        <td>iO</td>
+                        <td>Badger</td>
+                        <td>iO@BadgeriO.com</td>
+                        <td>100</td>
+                        <td>2020-10-15</td>
+                        <td>2020-10-17</td>
+                        <td>Found</td>
+                        <td>http://badgerIO.com/</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div> 
+          </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Sticky Footer - on all pages -->
+  <footer class="page-footer teal darken-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">BadgerIO</h5>
+          <p class="grey-text text-lighten-4">Helping you keep tabs on the competition.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Engage With Us!</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3 footer-li" href="#!"><i class="fab fa-github"></i>&nbsp<u>GitHub Repo</u>&nbsp&nbsp&nbsp&nbsp</a></li>
+            <li><a class="grey-text text-lighten-3 footer-li" href="#!"><i class="fas fa-envelope"></i>&nbsp<u>Contact</u>&nbsp&nbsp&nbsp&nbsp</a></li>
+            <li><a class="grey-text text-lighten-3 footer-li" href="#!"><i class="fas fa-pen-fancy"></i>&nbsp<u>Request A Feature</u></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright grey">
+      <div class="container">
+      © 2020 Copyright
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery needed here for other dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+ 
+  <!-- ***** Firebase code begins, please do not move anything above ***** -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+  <!-- The database src is not included by default -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+  <!-- Firebase Auth import -->
+  <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+  <!-- Initialize and connect to Firebase -->
+  <script src="firebase-init.js"></script>  
+  <!-- ***** Firebase code ends ***** -->
+    
+  <!-- Materialize - Compressed JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- Graphing API - Apex Charts -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+  <script src="htmlBuilder.js"></script>
+  <!-- Calls to Organic Search API -->
+  <script src="serpStack.js"></script>
+  <!-- Calls to HunterIO API -->
+  <script src="hunterIO.js"></script>
+  <!-- AEPX Dashboard JS -->
+  <script src="hunterIO.js"></script>
+
+
+</body>
+</html>
