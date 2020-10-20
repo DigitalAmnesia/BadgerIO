@@ -60,6 +60,29 @@ $(function(){
         }
     });
 
+    $('#dashboardsNavButton').on('click', function(){
+        if(testForMobile() === 'notMobile'){
+        $('#pageTemplateContainer').html(dashboardHomePageContent);//
+        var chart = new ApexCharts(document.querySelector("#barChartExample"),
+        {
+            chart: {
+              type: 'line'
+            },
+            series: [{
+              name: 'sales',
+              data: [30,40,35,50,49,60,70,91,125]
+            }],
+            xaxis: {
+              categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+            }
+        });
+        chart.render();
+        }
+        else{
+        $('#pageTemplateContainer').html(dashboardHomePageContentMobile);    //
+        }
+    });
+
     $('#emailSignInButton').on('click', function(){
         if(!$('#logInEmailDropDown').length){
         $('#appendToModal').append(logInViaEmail);
@@ -528,9 +551,11 @@ var queryHomePageTabContent =
  * Queries tab home page html content for mobile
  * @type {template literal}
  */
-    var queryHomePageTabContentMobile =
+var queryHomePageTabContentMobile =
 `<div class="row">
     <h5 class="center-header">Full Dashboards Only Available On Web UI</h5>
     <img src="images/organicReportForMobile.jpg" alt="Image of an example organic search report" class="mobileImage">
 </div>`;     
-        
+var dashboardHomePageContent =
+`<div id="barChartExample"></div>
+ <div id="donutExample"></div>`;      
