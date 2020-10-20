@@ -75,8 +75,10 @@ nav {
   position: sticky;
   top: 0;
   bottom: 0;
-  padding-left: 0px;
   font-size: 20px;
+}
+#bodyOverride #scrollBar li{
+  margin-left: -15px;
   line-height: 2;
 }
 
@@ -110,7 +112,6 @@ color: black !important;
   position: fixed;
   margin: auto;
   padding: 50px;
-
 }
 
 /* Styling for about page */
@@ -207,6 +208,7 @@ margin-right: auto;
   position: relative;
   margin: auto;
 }
+
 /* Hide the images by default */
 .mySlides {
   display: none;
