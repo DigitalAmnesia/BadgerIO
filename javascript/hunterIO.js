@@ -7,17 +7,17 @@ var email_Source_List={};
 var badgerEmailList = [];
 
 
+
 // This .on("click") function will trigger the AJAX Call
 $("#find-domain").on("click", function(event) {
+  event.preventDefault();
   // Here we grab the text from the input box
     var domain = $("#domain-input").val();
-    console.log(domain);  
+  //  console.log(domain);  
+
     
-  // event.preventDefault() can be used to prevent an event's default behavior.
-  // Here, it prevents the submit button from trying to submit a form when clicked
-    event.preventDefault();
-    var api_key = "####################################";
-    var email_finder = `https://api.hunter.io/v2/domain-search?domain=${domain}&api_key=${api_key}`;
+    var api_key = "########################";
+    var email_finder = `https://api.hunter.io/v2/domain-search?domain=${domain}&limit=100&api_key=${api_key}`;
   // This .on("click") function will trigger the AJAX Call
     console.log(email_finder);
   // Here we grab the text from the input box
@@ -30,11 +30,17 @@ $("#find-domain").on("click", function(event) {
       method: "GET"
     }).then(function(response) {
       email_Source_List = response;
-      console.log(email_Source_List);
+      // console.log(email_Source_List);
       var data = email_Source_List;
       var allEmailsTotal = data.data.emails.length;
+      var emailSpan = document.getElementById('emailCount');
+      emailSpan.innerHTML = allEmailsTotal;
+      console.log(allEmailsTotal);
+      var emailList = [];
+      
       for ( i = 0; i < allEmailsTotal; i++ ){
         var targetEmail = data.data.emails[i].value;
+        emailList.push(targetEmail);
         var firstName = data.data.emails[i].first_name;
         var lastName = data.data.emails[i].last_name;
         var confidence = data.data.emails[i].confidence;
@@ -56,9 +62,10 @@ $("#find-domain").on("click", function(event) {
           var still_on_page = data.data.emails[i].sources[j].still_on_page;
           badgerEmailList.push([targetDomain, firstName, lastName, targetEmail, confidence, disposable, webmail, accept_all, pattern, organization, country,extracted_on, last_seen, still_on_page, url,]);
           }
+        
         }
         
-        for ( i = 0; i < badgerEmailList.length; i++){
+      for ( i = 0; i < badgerEmailList.length; i++){
           //Grab the results table
           var table = document.getElementById("emailDiscoveryResults");
           // Create an empty <tr> element and add it to the 1st position of the table:
@@ -73,7 +80,6 @@ $("#find-domain").on("click", function(event) {
           var lastSeenDate = row.insertCell(6);  
           var onPage =   row.insertCell(7); 
           var source =   row.insertCell(7);
-          // Add the content to the cells
           domain.innerHTML = badgerEmailList[i][0];
           fname.innerHTML = badgerEmailList[i][1];
           lname.innerHTML = badgerEmailList[i][2];
@@ -81,90 +87,11 @@ $("#find-domain").on("click", function(event) {
           confidence.innerHTML = badgerEmailList[i][4];
           extractedDate.innerHTML = badgerEmailList[i][11];
           lastSeenDate.innerHTML = badgerEmailList[i][12];
-          
           onPage.innerHTML = badgerEmailList[i][14];
           source.innerHTML = badgerEmailList[i][13];
 
-        }
-        
+      }
+
     }); 
-    
+      
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // var domain = "digg.com";
-// /**
-//  * Returned JSON object from hunterIO API call
-//  * @type {JSON}
-//  */
-// var email_Source_List = {};
-// //Hey Mike, you may want to use a local variable using 'let' in side the function and return that then you can just have
-// //hunterIO(domain) in place of email_Source_List then you don't have to worry about setting and returning another variable 
-// /**
-//  * Hunter API call that finds plain text emails from queried domain
-//  * @param {string} domain - a domain provided by the user
-//  * @return {JSON} object containing email addresses
-//  * @example hunterIO('www.yahoo.com');
-//  */
-// function hunterIO(domain) {
-//     var api_key = "e56287fadf01a9610b2c26209a772ffc0832c728";
-//     var email_finder = `https://api.hunter.io/v2/domain-search?domain=${domain}&api_key=${api_key}`;
-//     // This .on("click") function will trigger the AJAX Call
-//     console.log(email_finder);
-//     // Here we grab the text from the input box
-//     var domain = $("#domain-input").val();
-//     console.log(`Email lookup made for: ${domain}`);
-//     var indexQueryURL = email_finder;
-//     // Call to Hunter.IO
-//     $.ajax({
-//       url: indexQueryURL,
-//       method: "GET"
-//     }).then(function(response) {
-//       email_Source_List = response;
-//       console.log(email_Source_List.data.emails[0]);
-//     });  
-//     return email_Source_List;
-// };
-
