@@ -7,6 +7,7 @@ $("#find-organic").on("click", function(event) {
       var domain = $("#organic-input").val();
       console.log(domain);  
       var api_key = "#######################";
+      api_key = $('#organic-APIkey-input').val();
       var organic_finder = `http://api.serpstack.com/search?access_key=${api_key}&query=site%3A${domain}&num=1000`;
 
     // This .on("click") function will trigger the AJAX Call
