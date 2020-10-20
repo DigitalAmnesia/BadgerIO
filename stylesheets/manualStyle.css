@@ -175,6 +175,7 @@ margin-right: auto;
   margin-left: auto;
   margin-right: auto;
 }
+
 .logIn {
   text-align: center;
   font-size: x-large;
@@ -187,7 +188,12 @@ margin-right: auto;
       margin: 0px;
 }
 
+.mobileImage {
+  max-width: 100%;
+}
+
 /* ***CSS for slider*** */
+
 
 * {box-sizing:border-box}
 /* Slideshow container */

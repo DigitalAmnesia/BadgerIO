@@ -3,23 +3,30 @@ var slideIndex = 1;
 showSlides(slideIndex);
 // Here is where we can use jQuery to dynamically insert addiontal HTML pages into the primary page
 $(function(){
-    testForMobile();
+    
     $('.createAnAccount').html(createAcountContent);
     $('#createAccountTrig').attr('href','#createAccountModal').addClass('modal-trigger');
     $('.logInModal').html(logInModalContent);
     $('#signInFirebase').attr('href','#logInModal').addClass('modal-trigger');
   
     // *** On Click Functions ***
+    
     $("#aboutBtn").on('click', function(){
         $('.homePageContainer').html(aboutContent);
+        let instance = M.Sidenav.getInstance(document.getElementById('mobile-demo'));
+        instance.close();
     });
 
     $("#accountBtn").on('click', function(){
         $('.homePageContainer').html(createAcountContentMobile);
+        let instance = M.Sidenav.getInstance(document.getElementById('mobile-demo'));
+        instance.close();
     });
 
     $("#logInBtn").on('click', function(){
         $('.homePageContainer').html(logInMobile);
+        let instance = M.Sidenav.getInstance(document.getElementById('mobile-demo'));
+        instance.close();
     });
 
     $(document).on('click', '#emailSignInButtonMobile', function(){
@@ -33,6 +40,15 @@ $(function(){
 
     $('.aboutButton').on('click', function(){
         $('.homePageContainer').html(aboutContent);
+    });
+
+    $('#reportsNavButton').on('click', function(){
+        if(testForMobile() === 'notMobile'){
+        $('#pageTemplateContainer').html(reportContent);
+        }
+        else{
+        $('#pageTemplateContainer').html(reportContentMobile);    
+        }
     });
 
     $('#emailSignInButton').on('click', function(){
@@ -90,6 +106,7 @@ $(function(){
     //initialize Materialize content last so that it is rendered
     $('.modal').modal(); //needed in order to initialize Materialize modals
     $('.sidenav').sidenav(); //needed in order to initialize side bar for mobile menu
+    
 });
 /**
  * Dots action, iterates slide show 
@@ -155,22 +172,7 @@ function showSlidesAuto() {
 function checkIfLocal(){
     if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === ""){
         alert("Google Sign in only works from HTTP/S, not local!");//reminder to devs
-        //getKeys();
     }
-}
-//TODO: getKeys() not working, figure out a way to load API keys from .gitignored file for local testing
-/**
- * This is a function for getting API keys when running locally, it reads in the APIkeys2.txt file
- * @return {string[]}
- */
-function getKeys(){
-    let file = $('<file>').attr('href','file:APIkeys2.txt');
-    let reader = new FileReader();
-    reader.addEventListener('load', function(e){
-        let text = e.target.result;
-        alert(text);
-    });
-    reader.readAsText(file);
 }
 /**
  * Checks if the user is on a mobile device and if so enters past the control statement
@@ -178,8 +180,12 @@ function getKeys(){
  */
 function testForMobile(){
     if (/Mobi|Android/i.test(navigator.userAgent)) {
-        $('.brand-logo').removeAttr('id'); //centers the logo on mobile devices -- remember to refresh in inspector
-        //remove tab images since they do not wrap for mobile devices
+        // TODO: replace with @media in css
+        // $('.brand-logo').removeAttr('id'); //centers the logo on mobile devices -- remember to refresh in inspector
+        return 'mobile';
+    }
+    else{
+        return 'notMobile';
     }
 }
 /**
@@ -193,7 +199,7 @@ var aboutContent =
         <div class = "col l3 responsiveProfile">
             <div class="card large" id="Bennett-Card">
                 <div class="card-image">
-                    <img src="images/bgould.jpeg">
+                    <img src="images/bgould.jpeg" alt="Bennett Gould, site developer, profile picture">
                     <span class="card-title">Bennett Gould</span>
                 </div>
                 <div class="card-content">
@@ -208,7 +214,7 @@ var aboutContent =
         <div class = "col l3 responsiveProfile">
             <div class="card large" id="Mike-Card">
                 <div class="card-image">
-                    <img src="images/Mike.jpg">
+                    <img src="images/Mike.jpg" alt="Mike Hill, site developer, profile picture">
                     <span class="card-title">Mike Hill</span>
                 </div>
                 <div class="card-content">
@@ -223,7 +229,7 @@ var aboutContent =
         <div class = "col l3 responsiveProfile">
             <div class="card large" id="Habby-Card">
                 <div class="card-image">
-                    <img src="images/Habby.jpg">
+                    <img src="images/Habby.jpg" alt="Habby Olusesi, site developer, profile picture">
                     <span class="card-title">Habby Olusesi</span>
                 </div>
                 <div class="card-content">
@@ -238,7 +244,7 @@ var aboutContent =
         <div class = "col l3 responsiveProfile">
             <div class="card large" id="Elijah-Card">
                 <div class="card-image">
-                    <img src="images/sample-1.jpeg">
+                    <img src="images/sample-1.jpeg" alt="Elijah Melanson, site developer, profile picture">
                     <span class="card-title">Elijah Melanson</span>
                 </div>
                 <div class="card-content">
@@ -300,10 +306,10 @@ var logInModalContent =
         <div class="col s12">
             <div class="row">
                 <div class="collection logInOptions">
-                    <a class="collection-item logIn" id="googleSignInButton"><i class="fab fa-google logInIcon" style="color:#DB4437;"></i>&nbspGoogle Sign In</a>
-                    <a class="collection-item logIn"><i class="fab fa-facebook-square logInIcon" style="color:#3b5998;"></i>&nbspFacebook Sign In</a>
-                    <a class="collection-item logIn"><i class="fab fa-apple logInIcon" style="color:#7D7D7D;"></i>&nbspApple Sign In</a>
-                    <a class="collection-item logIn" id="emailSignInButton"><i class="fas fa-envelope logInIcon"></i>&nbspEmail Sign In</a>
+                    <a class="collection-item logIn" href="#" id="googleSignInButton"><i class="fab fa-google logInIcon" style="color:#DB4437;"></i>&nbspGoogle</a>
+                    <a class="collection-item logIn" href="#"><i class="fab fa-facebook-square logInIcon" style="color:#3b5998;"></i>&nbspFacebook</a>
+                    <a class="collection-item logIn" href="#"><i class="fab fa-apple logInIcon" style="color:#7D7D7D;"></i>&nbspApple</a>
+                    <a class="collection-item logIn" href="#" id="emailSignInButton"><i class="fas fa-envelope logInIcon"></i>&nbspEmail</a>
                 </div>     
             </div>
         </div>
@@ -391,7 +397,7 @@ var createAcountContent =
                         </div>
                         <div class="row">
                             <div class="input-field col s4">
-                                <a href="#" class="btn waves-effect waves-light col" id="createAccountButton"><h6>Create Account</h6></a>
+                                <a href="#" class="btn waves-effect waves-light col" id="createAccountButton"><h6>Create</h6></a>
                             </div>
                             <div class="input-field col s3 modal-close" id = "cancel" >
                                 <a href="#" class="btn waves-effect waves-light col" id="waves-red"><h6>Cancel</h6></a>
@@ -403,3 +409,60 @@ var createAcountContent =
         </div>
       </div>
 </div>`;
+var reportContent =
+`<div class="container">
+        <div class="row">
+            <div class="col s7 push-s5"><span class="flow-text">
+                <!-- This form will be where users input data about the movies -->
+                <form id="domain-form">
+                    <label for="domain-input" class="changeFormTransitionBehavior">Enter Domain Name</label>
+                    <input type="text" id="domain-input"><br>
+                    <!-- This button will trigger our AJAX call -->
+                    <input id="find-domain" type="submit" value="Domain Search">
+                </form>
+                </span>
+            </div>
+            <div class="col s5 pull-s7">
+                <span class="flow-text">5-columns wide pulled to the left by 7-columns. We should use this space to place some stats</span>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col s12">
+                <table id="emailDiscoveryResults">
+                    <thead>
+                        <tr>
+                            <th><b>Domain</b></th>
+                            <th><b>FName</b></th>
+                            <th><b>LName</b></th>
+                            <th><b>Email</b></th>
+                            <th><b>Confidence</b></th>
+                            <th><b>Extracted On</b></th>
+                            <th><b>Last Seen</b></th>
+                            <th><b>On Page</b></th>
+                            <th><b>Source</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="emailReturnData">
+                            <td>badger.com</td>
+                            <td>iO</td>
+                            <td>Badger</td>
+                            <td>iO@BadgeriO.com</td>
+                            <td>100</td>
+                            <td>2020-10-15</td>
+                            <td>2020-10-17</td>
+                            <td>Found</td>
+                            <td>http://badgerIO.com/</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>`;
+var reportContentMobile =
+`<div class="row">
+    <h5 class="center-header">Full Dashboards Only Available On Web UI</h5>
+    <img src="images/reportCapture.jpg" alt="Image of an example report" class="mobileImage">
+</div>`;        
+        
